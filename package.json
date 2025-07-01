@@ -1,15 +1,25 @@
 {
   "name": "odonto-omega",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Componente de odontograma, hecho por roand-hq",
+  "author": "Rodrigo Hurtado",
+  "license": "MIT",
+  "main": "dist/Odontograma.umd.cjs",
   "type": "module",
+  "files":["dist"],
+  "exports":{
+    ".":{
+      "import": "./dist/Odontograma.js",
+      "require": "./dist/Odontograma.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

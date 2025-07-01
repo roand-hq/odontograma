@@ -5,7 +5,7 @@ import { Diente } from "./Components/Diente";
 import { Header } from "./Components/Header";
 import { useState } from "react";
 import { useHandleData } from "./hooks/useHandleData";
-function App() {
+function Odontograma() {
   const { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes } = useColorChange();
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
@@ -129,4 +129,4 @@ function App() {
   );
 }
 
-export default App;
+export default Odontograma;
