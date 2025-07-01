@@ -12,6 +12,7 @@ export default defineConfig({
       fileName: (format) => `Odontograma.${format}.cjs`, // genera .js y .umd.cjs
       formats: ['es', 'umd']
     },
+    cssCodeSplit: true,
     rollupOptions: {
       // No incluir react y react-dom en el bundle
       external: ['react', 'react-dom'],
