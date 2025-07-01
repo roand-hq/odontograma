@@ -9,7 +9,7 @@
   "files":["dist"],
   "exports":{
     ".":{
-      "import": "./dist/Odontograma.es.js",
+      "import": "./dist/Odontograma.es.cjs",
       "require": "./dist/Odontograma.umd.cjs"
     }
   },
