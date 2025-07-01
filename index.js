@@ -1,2 +1,2 @@
-import Odontograma from "./src/App"
+import Odontograma from "./src/Odontograma"
 export default Odontograma
