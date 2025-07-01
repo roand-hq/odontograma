@@ -1,56 +1,69 @@
-const Diente = ({
-  numero,
-  cuadrante,
-  colorSeleccionado,
-  coloresSecciones,
-  cambiarColorSeccion,
-}) => {
+// Componente Diente mejorado
+import { useState } from "react";
+const Diente = ({ numero, cuadrante, colorSeleccionado, coloresSecciones, cambiarColorSeccion }) => {
   const idDiente = `${cuadrante}${numero}`;
+  const [hoveredSection, setHoveredSection] = useState(null);
 
   const handleClick = (seccion) => {
     cambiarColorSeccion(idDiente, seccion, colorSeleccionado.valor);
   };
 
+  const getSectionStyle = (seccion, defaultBg) => ({
+    backgroundColor: coloresSecciones[seccion] || defaultBg,
+    opacity: hoveredSection === seccion ? 0.8 : 1,
+  });
+
   return (
-    <div className="contenedor-diente">
-      <div className="numero-diente">{idDiente}</div>
-
-      <div className="diente">
+    <div className="diente-container">
+      <div className="numero-diente-mejorado">
+        {idDiente}
+      </div>
+      
+      <div className="diente-mejorado">
         <div
-          className="seccion arriba"
-          style={{ backgroundColor: coloresSecciones.arriba }}
+          className="seccion-mejorada arriba-mejorada"
+          style={getSectionStyle('arriba', '#ffffff')}
           onClick={() => handleClick("arriba")}
-        ></div>
+          onMouseEnter={() => setHoveredSection('arriba')}
+          onMouseLeave={() => setHoveredSection(null)}
+        />
 
         <div
-          className="seccion abajo"
-          style={{ backgroundColor: coloresSecciones.abajo }}
+          className="seccion-mejorada abajo-mejorada"
+          style={getSectionStyle('abajo', '#ffffff')}
           onClick={() => handleClick("abajo")}
-        ></div>
+          onMouseEnter={() => setHoveredSection('abajo')}
+          onMouseLeave={() => setHoveredSection(null)}
+        />
 
         <div
-          className="seccion izq"
-          style={{ backgroundColor: coloresSecciones.izquierda }}
+          className="seccion-mejorada izq-mejorada"
+          style={getSectionStyle('izquierda', '#ffffff')}
           onClick={() => handleClick("izquierda")}
-        ></div>
+          onMouseEnter={() => setHoveredSection('izquierda')}
+          onMouseLeave={() => setHoveredSection(null)}
+        />
 
         <div
-          className="seccion der"
-          style={{ backgroundColor: coloresSecciones.derecha }}
+          className="seccion-mejorada der-mejorada"
+          style={getSectionStyle('derecha', '#ffffff')}
           onClick={() => handleClick("derecha")}
-        ></div>
+          onMouseEnter={() => setHoveredSection('derecha')}
+          onMouseLeave={() => setHoveredSection(null)}
+        />
 
         <div
-          className="centro"
-          style={{ backgroundColor: coloresSecciones.centro }}
+          className="centro-mejorado"
+          style={getSectionStyle('centro', '#ffffff')}
           onClick={() => handleClick("centro")}
-        ></div>
+          onMouseEnter={() => setHoveredSection('centro')}
+          onMouseLeave={() => setHoveredSection(null)}
+        />
 
-        <div className="linea-diagonal-izq"></div>
-        <div className="linea-diagonal-der"></div>
+        <div className="linea-diagonal-izq-mejorada" />
+        <div className="linea-diagonal-der-mejorada" />
       </div>
     </div>
   );
 };
-
-export { Diente };
+export {Diente}

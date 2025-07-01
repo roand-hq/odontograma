@@ -2,26 +2,28 @@ import { useState } from "react";
 
 const useColorChange = () => {
   const colors = [
-    { nombre: "Rojo", valor: "#ff0000" },
-    { nombre: "Verde", valor: "#00ff00" },
-    { nombre: "Azul", valor: "#0000ff" },
-    { nombre: "Amarillo", valor: "#ffff00" },
-    { nombre: "Negro", valor: "#000000" },
+    { nombre: "Caries", valor: "#dc2626" },
+    { nombre: "Obturación", valor: "#3b82f6" },
+    { nombre: "Corona", valor: "#fbbf24" },
+    { nombre: "Extracción", valor: "#374151" },
+    { nombre: "Endodoncia", valor: "#7c3aed" },
+    { nombre: "Prótesis", valor: "#10b981" },
+    { nombre: "Fractura", valor: "#f97316" },
   ];
 
   const inicializarEstadoDientes = () => {
     const dientes = {};
-    const cuadrantes = [1, 2, 3, 4]; // O los números que usas en tus cuadrantes
+    const cuadrantes = [1, 2, 3, 4];
     for (let cuadrante of cuadrantes) {
       for (let numero = 1; numero <= 8; numero++) {
         const idDiente = `${cuadrante}${numero}`;
         dientes[idDiente] = {
-          deshabilitado: false, // Estado por defecto
-          arriba: "#ffffff", // Color por defecto
-          centro: "#ffffff", // Color por defecto
-          izquierda: "#ffffff", // Color por defecto
-          derecha: "#ffffff", // Color por defecto
-          abajo: "#ffffff", // Color por defecto
+          deshabilitado: false,
+          arriba: "#ffffff",
+          centro: "#ffffff",
+          izquierda: "#ffffff",
+          derecha: "#ffffff",
+          abajo: "#ffffff",
         };
       }
     }
