@@ -1,6 +1,6 @@
 {
   "name": "odonto-omega",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Componente de odontograma, hecho por roand-hq",
   "author": "Rodrigo Hurtado",
   "license": "MIT",
@@ -14,7 +14,8 @@
     ".": {
       "import": "./dist/Odontograma.es.cjs",
       "require": "./dist/Odontograma.umd.cjs"
-    }
+    },
+     "./dist/index.css": "./dist/index.css"
   },
   "scripts": {
     "dev": "vite",
