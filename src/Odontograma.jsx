@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useColorChange } from "./hooks/useColorChange";
-import {useHandleData } from "./hooks/useHandleData"
+import { useHandleData } from "./hooks/useHandleData";
 import { Header } from "./Components/Header";
 import { Diente } from "./Components/Diente";
-const Odontograma = () => {
-  const { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes } = useColorChange();
+const Odontograma = ({ savedState, onSave }) => {
+  const { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes } =
+    useColorChange();
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
-  const { handleExport, handleImport } = useHandleData(estadoDientes, setEstadoDientes);
+  const [hidratado, setHidratado] = useState(false);
+ 
+  const { handleExport } = useHandleData(
+    estadoDientes,
+    setEstadoDientes
+  );
+  const handleGuardar = () => {
+    const datos = handleExport();
+    console.log(datos);
+    onSave(datos)
+  };
 
+  useEffect(() => {
+  if (savedState && !hidratado) {
+    setEstadoDientes(savedState);
+    setHidratado(true);
+  }
+}, [savedState, hidratado]);
   return (
     <>
       <style>{`
@@ -424,15 +441,13 @@ const Odontograma = () => {
       `}</style>
 
       <div className="odontograma-container">
-
         <Header
           abierto={abierto}
           onClick={() => setAbierto(!abierto)}
           colorSeleccionado={colorSeleccionado}
           setColorSeleccionado={setColorSeleccionado}
           colores={colors}
-          handleExport={handleExport}
-          handleImport={handleImport}
+          handleExport={handleGuardar}
         />
 
         <div className="odontograma-grid">
@@ -515,7 +530,7 @@ const Odontograma = () => {
           <div className="leyenda-grid">
             {colors.map((color) => (
               <div key={color.valor} className="leyenda-item">
-                <div 
+                <div
                   className="leyenda-color"
                   style={{ backgroundColor: color.valor }}
                 />
