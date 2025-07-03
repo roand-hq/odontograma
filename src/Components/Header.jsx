@@ -1,4 +1,3 @@
-import { useRef } from "react";
 
 const Header = ({ abierto, onClick, colorSeleccionado, setColorSeleccionado, colores, handleExport }) => {
   const seleccionarColor = (color) => {
