@@ -9,23 +9,20 @@ const Odontograma = ({ savedState, onSave }) => {
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
   const [hidratado, setHidratado] = useState(false);
- 
-  const { handleExport } = useHandleData(
-    estadoDientes,
-    setEstadoDientes
-  );
+
+  const { handleExport } = useHandleData(estadoDientes, setEstadoDientes);
   const handleGuardar = () => {
     const datos = handleExport();
     console.log(datos);
-    onSave(datos)
+    onSave(datos);
   };
 
   useEffect(() => {
-  if (savedState && !hidratado) {
-    setEstadoDientes(savedState);
-    setHidratado(true);
-  }
-}, [savedState, hidratado]);
+    if (savedState && !hidratado) {
+      setEstadoDientes(savedState);
+      setHidratado(true);
+    }
+  }, [savedState, hidratado]);
   return (
     <>
       <style>{`
@@ -438,6 +435,22 @@ const Odontograma = ({ savedState, onSave }) => {
           font-size: 14px;
           color: #64748b;
         }
+
+        .odontograma-seccion {
+  margin-top: 64px;
+}
+        .dientes-fila-infantiles-izq{
+          display: flex;
+          gap: 8px;
+          justify-content: end
+
+}
+        .dientes-fila-infantiles-der{
+          display: flex;
+          gap: 8px;
+          justify-content: start
+
+}
       `}</style>
 
       <div className="odontograma-container">
@@ -449,79 +462,129 @@ const Odontograma = ({ savedState, onSave }) => {
           colores={colors}
           handleExport={handleGuardar}
         />
-
-        <div className="odontograma-grid">
-          {/* Cuadrante 1 */}
-          <div className="cuadrante cuadrante-1">
-            <div className="numero-cuadrante">1</div>
-            <div className="dientes-fila">
-              {["8", "7", "6", "5", "4", "3", "2", "1"].map((n) => (
-                <Diente
-                  key={`1-${n}`}
-                  numero={n}
-                  cuadrante="1"
-                  colorSeleccionado={colorSeleccionado}
-                  coloresSecciones={estadoDientes[`1${n}`]}
-                  cambiarColorSeccion={cambiarColorSeccion}
-                />
-              ))}
+        {/* ------------------ ODONTOGRAMA COMPLETO ------------------ */}
+        <div className="odontograma-seccion">
+          <div className="odontograma-grid">
+            {/* Cuadrante 1: 18-11 permanentes y 55-51 temporales */}
+            <div className="cuadrante cuadrante-1">
+              <div className="numero-cuadrante">1</div>
+              <div className="dientes-fila">
+                {["8", "7", "6", "5", "4", "3", "2", "1"].map((n) => (
+                  <Diente
+                    key={`1-${n}`}
+                    numero={n}
+                    cuadrante="1"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`1${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="dientes-fila-infantiles-izq">
+                {["5", "4", "3", "2", "1"].map((n) => (
+                  <Diente
+                    key={`5-${n}`}
+                    numero={n}
+                    cuadrante="5"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`5${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Cuadrante 2 */}
-          <div className="cuadrante cuadrante-2">
-            <div className="numero-cuadrante">2</div>
-            <div className="dientes-fila">
-              {["1", "2", "3", "4", "5", "6", "7", "8"].map((n) => (
-                <Diente
-                  key={`2-${n}`}
-                  numero={n}
-                  cuadrante="2"
-                  colorSeleccionado={colorSeleccionado}
-                  coloresSecciones={estadoDientes[`2${n}`]}
-                  cambiarColorSeccion={cambiarColorSeccion}
-                />
-              ))}
+            {/* Cuadrante 2: 21-28 permanentes y 61-65 temporales */}
+            <div className="cuadrante cuadrante-2">
+              <div className="numero-cuadrante">2</div>
+              <div className="dientes-fila">
+                {["1", "2", "3", "4", "5", "6", "7", "8"].map((n) => (
+                  <Diente
+                    key={`2-${n}`}
+                    numero={n}
+                    cuadrante="2"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`2${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="dientes-fila-infantiles-der">
+                {["1", "2", "3", "4", "5"].map((n) => (
+                  <Diente
+                    key={`6-${n}`}
+                    numero={n}
+                    cuadrante="6"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`6${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Cuadrante 4 */}
-          <div className="cuadrante cuadrante-4">
-            <div className="dientes-fila">
-              {["8", "7", "6", "5", "4", "3", "2", "1"].map((n) => (
-                <Diente
-                  key={`4-${n}`}
-                  numero={n}
-                  cuadrante="4"
-                  colorSeleccionado={colorSeleccionado}
-                  coloresSecciones={estadoDientes[`4${n}`]}
-                  cambiarColorSeccion={cambiarColorSeccion}
-                />
-              ))}
+            {/* Cuadrante 4: 48-41 permanentes y 85-81 temporales */}
+            <div className="cuadrante cuadrante-4">
+              <div className="dientes-fila-infantiles-izq">
+                {["5", "4", "3", "2", "1"].map((n) => (
+                  <Diente
+                    key={`8-${n}`}
+                    numero={n}
+                    cuadrante="8"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`8${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="dientes-fila">
+                {["8", "7", "6", "5", "4", "3", "2", "1"].map((n) => (
+                  <Diente
+                    key={`4-${n}`}
+                    numero={n}
+                    cuadrante="4"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`4${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="numero-cuadrante">4</div>
             </div>
-            <div className="numero-cuadrante">4</div>
-          </div>
 
-          {/* Cuadrante 3 */}
-          <div className="cuadrante cuadrante-3">
-            <div className="dientes-fila">
-              {["1", "2", "3", "4", "5", "6", "7", "8"].map((n) => (
-                <Diente
-                  key={`3-${n}`}
-                  numero={n}
-                  cuadrante="3"
-                  colorSeleccionado={colorSeleccionado}
-                  coloresSecciones={estadoDientes[`3${n}`]}
-                  cambiarColorSeccion={cambiarColorSeccion}
-                />
-              ))}
+            {/* Cuadrante 3: 31-38 permanentes y 71-75 temporales */}
+            <div className="cuadrante cuadrante-3">
+              <div className="dientes-fila-infantiles-der">
+                {["1", "2", "3", "4", "5"].map((n) => (
+                  <Diente
+                    key={`7-${n}`}
+                    numero={n}
+                    cuadrante="7"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`7${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="dientes-fila">
+                {["1", "2", "3", "4", "5", "6", "7", "8"].map((n) => (
+                  <Diente
+                    key={`3-${n}`}
+                    numero={n}
+                    cuadrante="3"
+                    colorSeleccionado={colorSeleccionado}
+                    coloresSecciones={estadoDientes[`3${n}`]}
+                    cambiarColorSeccion={cambiarColorSeccion}
+                  />
+                ))}
+              </div>
+              <div className="numero-cuadrante">3</div>
             </div>
-            <div className="numero-cuadrante">3</div>
-          </div>
 
-          {/* Líneas divisorias */}
-          <div className="linea-vertical" />
-          <div className="linea-horizontal" />
+            {/* Líneas divisorias */}
+            <div className="linea-vertical" />
+            <div className="linea-horizontal" />
+          </div>
         </div>
 
         {/* Leyenda de colores */}

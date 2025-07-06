@@ -13,9 +13,9 @@ const useColorChange = () => {
 
   const inicializarEstadoDientes = () => {
     const dientes = {};
-    const cuadrantes = [1, 2, 3, 4];
+    const cuadrantes = [1, 2, 3, 4, 5, 6, 7, 8];
     for (let cuadrante of cuadrantes) {
-      for (let numero = 1; numero <= 8; numero++) {
+      for (let numero = 1; numero <= (cuadrante <= 4 ? 8 : 5); numero++) {
         const idDiente = `${cuadrante}${numero}`;
         dientes[idDiente] = {
           deshabilitado: false,
