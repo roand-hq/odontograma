@@ -27,21 +27,22 @@ Este proyecto es una **aplicación web** desarrollada con **React + Vite** para 
   cd odontograma
   npm install
 
-  ```bash
+  ```
 ---
 ## 📦 Cómo usarlo en otro proyecto
 
 Puedes integrar este odontograma como un componente externo en cualquier proyecto React usando npm con el enlace al repositorio de GitHub:
 
 ### 1. Instalar directamente desde GitHub
-
 ```bash
 npm install git+https://github.com/roand-hq/odontograma.git
+```
 
-###2. Importarlo en tu archivo
+###2.Importarlo en tu archivo
 ```bash
 import Odontograma from 'odonto-omega'
-
-###3. Pegar el componente
-```bash
-<Odontograma/> 
+```
+###3.Pegar el componente
+```js
+<Odontograma/>
+```
