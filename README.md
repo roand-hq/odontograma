@@ -27,6 +27,8 @@ Este proyecto es una **aplicación web** desarrollada con **React + Vite** para 
   cd odontograma
   npm install
 
+  ```bash
+---
 ## 📦 Cómo usarlo en otro proyecto
 
 Puedes integrar este odontograma como un componente externo en cualquier proyecto React usando npm con el enlace al repositorio de GitHub:
