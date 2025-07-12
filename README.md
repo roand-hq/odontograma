@@ -22,10 +22,10 @@ Este proyecto es una **aplicación web** desarrollada con **React + Vite** para 
 
 ### Instalación
 
-```bash
-git clone https://github.com/roand-hq/odontograma.git
-cd odontograma
-npm install
+  ```bash
+  git clone https://github.com/roand-hq/odontograma.git
+  cd odontograma
+  npm install
 
 ## 📦 Cómo usarlo en otro proyecto
 
