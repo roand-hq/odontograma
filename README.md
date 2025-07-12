@@ -1,12 +1,45 @@
-# React + Vite
+# 🦷 Odontograma Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una **aplicación web** desarrollada con **React + Vite** para el registro visual interactivo del estado bucodental (odontograma) de pacientes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Características
 
-## Expanding the ESLint configuration
+- Visualización dinámica del estado de cada pieza dental.
+- Interacción gráfica: clic para asignar síntomas o tratamientos.
+- Compatible con símbolos estándares (fracturas, caries, extracciones, etc.).
+- Configuración ligera usando Vite + React, sin sobrecarga innecesaria. :contentReference[oaicite:1]{index=1}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Comenzando
+
+### Requisitos
+
+- Node.js v16 o superior  
+- npm
+
+### Instalación
+
+```bash
+git clone https://github.com/roand-hq/odontograma.git
+cd odontograma
+npm install
+
+## 📦 Cómo usarlo en otro proyecto
+
+Puedes integrar este odontograma como un componente externo en cualquier proyecto React usando npm con el enlace al repositorio de GitHub:
+
+### 1. Instalar directamente desde GitHub
+
+```bash
+npm install git+https://github.com/roand-hq/odontograma.git
+
+###2. Importarlo en tu archivo
+```bash
+import Odontograma from 'odonto-omega'
+
+###3. Pegar el componente
+```bash
+<Odontograma/> 
