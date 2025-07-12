@@ -19,15 +19,6 @@ Este proyecto es una **aplicación web** desarrollada con **React + Vite** para 
 
 - Node.js v16 o superior  
 - npm
-
-### Instalación
-
-  ```bash
-  git clone https://github.com/roand-hq/odontograma.git
-  cd odontograma
-  npm install
-
-  ```
 ---
 ## 📦 Cómo usarlo en otro proyecto
 
@@ -38,11 +29,11 @@ Puedes integrar este odontograma como un componente externo en cualquier proyect
 npm install git+https://github.com/roand-hq/odontograma.git
 ```
 
-###2.Importarlo en tu archivo
-```bash
+### 2.Importarlo en tu archivo
+```js
 import Odontograma from 'odonto-omega'
 ```
-###3.Pegar el componente
+### 3.Pegar el componente
 ```js
 <Odontograma/>
 ```
