@@ -1,5 +1,5 @@
-import ae, { useState as N, useEffect as ne } from "react";
-var _ = { exports: {} }, k = {};
+import oe, { useState as R, useEffect as ne } from "react";
+var T = { exports: {} }, N = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -11,27 +11,27 @@ var _ = { exports: {} }, k = {};
  */
 var F;
 function te() {
-  if (F) return k;
+  if (F) return N;
   F = 1;
-  var l = Symbol.for("react.transitional.element"), u = Symbol.for("react.fragment");
-  function m(c, n, t) {
+  var c = Symbol.for("react.transitional.element"), u = Symbol.for("react.fragment");
+  function m(l, n, i) {
     var f = null;
-    if (t !== void 0 && (f = "" + t), n.key !== void 0 && (f = "" + n.key), "key" in n) {
-      t = {};
-      for (var a in n)
-        a !== "key" && (t[a] = n[a]);
-    } else t = n;
-    return n = t.ref, {
-      $$typeof: l,
-      type: c,
+    if (i !== void 0 && (f = "" + i), n.key !== void 0 && (f = "" + n.key), "key" in n) {
+      i = {};
+      for (var t in n)
+        t !== "key" && (i[t] = n[t]);
+    } else i = n;
+    return n = i.ref, {
+      $$typeof: c,
+      type: l,
       key: f,
       ref: n !== void 0 ? n : null,
-      props: t
+      props: i
     };
   }
-  return k.Fragment = u, k.jsx = m, k.jsxs = m, k;
+  return N.Fragment = u, N.jsx = m, N.jsxs = m, N;
 }
-var y = {};
+var k = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -44,7 +44,7 @@ var y = {};
 var W;
 function ie() {
   return W || (W = 1, process.env.NODE_ENV !== "production" && function() {
-    function l(e) {
+    function c(e) {
       if (e == null) return null;
       if (typeof e == "function")
         return e.$$typeof === ee ? null : e.displayName || e.name || null;
@@ -67,7 +67,7 @@ function ie() {
         switch (typeof e.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), e.$$typeof) {
-          case i:
+          case a:
             return "Portal";
           case H:
             return (e.displayName || "Context") + ".Provider";
@@ -77,11 +77,11 @@ function ie() {
             var o = e.render;
             return e = e.displayName, e || (e = o.displayName || o.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case Q:
-            return o = e.displayName || null, o !== null ? o : l(e.type) || "Memo";
-          case $:
+            return o = e.displayName || null, o !== null ? o : c(e.type) || "Memo";
+          case z:
             o = e._payload, e = e._init;
             try {
-              return l(e(o));
+              return c(e(o));
             } catch {
             }
         }
@@ -99,20 +99,20 @@ function ie() {
       }
       if (o) {
         o = console;
-        var s = o.error, p = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
-        return s.call(
+        var d = o.error, p = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        return d.call(
           o,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           p
         ), u(e);
       }
     }
-    function c(e) {
+    function l(e) {
       if (e === S) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === $)
+      if (typeof e == "object" && e !== null && e.$$typeof === z)
         return "<...>";
       try {
-        var o = l(e);
+        var o = c(e);
         return o ? "<" + o + ">" : "<...>";
       } catch {
         return "<...>";
@@ -122,7 +122,7 @@ function ie() {
       var e = O.A;
       return e === null ? null : e.getOwner();
     }
-    function t() {
+    function i() {
       return Error("react-stack-top-frame");
     }
     function f(e) {
@@ -132,34 +132,34 @@ function ie() {
       }
       return e.key !== void 0;
     }
-    function a(e, o) {
-      function s() {
+    function t(e, o) {
+      function d() {
         L || (L = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           o
         ));
       }
-      s.isReactWarning = !0, Object.defineProperty(e, "key", {
-        get: s,
+      d.isReactWarning = !0, Object.defineProperty(e, "key", {
+        get: d,
         configurable: !0
       });
     }
-    function d() {
-      var e = l(this.type);
+    function s() {
+      var e = c(this.type);
       return Y[e] || (Y[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function b(e, o, s, p, j, h, C, P) {
-      return s = h.ref, e = {
-        $$typeof: R,
+    function b(e, o, d, p, j, h, C, P) {
+      return d = h.ref, e = {
+        $$typeof: _,
         type: e,
         key: o,
         props: h,
         _owner: j
-      }, (s !== void 0 ? s : null) !== null ? Object.defineProperty(e, "ref", {
+      }, (d !== void 0 ? d : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: d
+        get: s
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -182,25 +182,25 @@ function ie() {
         value: P
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, o, s, p, j, h, C, P) {
+    function g(e, o, d, p, j, h, C, P) {
       var x = o.children;
       if (x !== void 0)
         if (p)
           if (re(x)) {
             for (p = 0; p < x.length; p++)
-              v(x[p]);
+              E(x[p]);
             Object.freeze && Object.freeze(x);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else v(x);
+        else E(x);
       if (M.call(o, "key")) {
-        x = l(e);
-        var w = Object.keys(o).filter(function(oe) {
-          return oe !== "key";
+        x = c(e);
+        var y = Object.keys(o).filter(function(ae) {
+          return ae !== "key";
         });
-        p = 0 < w.length ? "{key: someKey, " + w.join(": ..., ") + ": ...}" : "{key: someKey}", q[x + p] || (w = 0 < w.length ? "{" + w.join(": ..., ") + ": ...}" : "{}", console.error(
+        p = 0 < y.length ? "{key: someKey, " + y.join(": ..., ") + ": ...}" : "{key: someKey}", I[x + p] || (y = 0 < y.length ? "{" + y.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -209,17 +209,17 @@ React keys must be passed directly to JSX without using spread:
   <%s key={someKey} {...props} />`,
           p,
           x,
-          w,
+          y,
           x
-        ), q[x + p] = !0);
+        ), I[x + p] = !0);
       }
-      if (x = null, s !== void 0 && (m(s), x = "" + s), f(o) && (m(o.key), x = "" + o.key), "key" in o) {
-        s = {};
-        for (var z in o)
-          z !== "key" && (s[z] = o[z]);
-      } else s = o;
-      return x && a(
-        s,
+      if (x = null, d !== void 0 && (m(d), x = "" + d), f(o) && (m(o.key), x = "" + o.key), "key" in o) {
+        d = {};
+        for (var $ in o)
+          $ !== "key" && (d[$] = o[$]);
+      } else d = o;
+      return x && t(
+        d,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), b(
         e,
@@ -227,60 +227,60 @@ React keys must be passed directly to JSX without using spread:
         h,
         j,
         n(),
-        s,
+        d,
         C,
         P
       );
     }
-    function v(e) {
-      typeof e == "object" && e !== null && e.$$typeof === R && e._store && (e._store.validated = 1);
+    function E(e) {
+      typeof e == "object" && e !== null && e.$$typeof === _ && e._store && (e._store.validated = 1);
     }
-    var E = ae, R = Symbol.for("react.transitional.element"), i = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = E.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
+    var w = oe, _ = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = w.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
-    E = {
+    w = {
       "react-stack-bottom-frame": function(e) {
         return e();
       }
     };
-    var L, Y = {}, D = E["react-stack-bottom-frame"].bind(
-      E,
-      t
-    )(), I = A(c(t)), q = {};
-    y.Fragment = S, y.jsx = function(e, o, s, p, j) {
+    var L, Y = {}, q = w["react-stack-bottom-frame"].bind(
+      w,
+      i
+    )(), D = A(l(i)), I = {};
+    k.Fragment = S, k.jsx = function(e, o, d, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
-        s,
+        d,
         !1,
         p,
         j,
-        h ? Error("react-stack-top-frame") : D,
-        h ? A(c(e)) : I
+        h ? Error("react-stack-top-frame") : q,
+        h ? A(l(e)) : D
       );
-    }, y.jsxs = function(e, o, s, p, j) {
+    }, k.jsxs = function(e, o, d, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
-        s,
+        d,
         !0,
         p,
         j,
-        h ? Error("react-stack-top-frame") : D,
-        h ? A(c(e)) : I
+        h ? Error("react-stack-top-frame") : q,
+        h ? A(l(e)) : D
       );
     };
-  }()), y;
+  }()), k;
 }
 var U;
 function se() {
-  return U || (U = 1, process.env.NODE_ENV === "production" ? _.exports = te() : _.exports = ie()), _.exports;
+  return U || (U = 1, process.env.NODE_ENV === "production" ? T.exports = te() : T.exports = ie()), T.exports;
 }
 var r = se();
-const de = () => {
-  const l = [
+const le = () => {
+  const c = [
     { nombre: "Caries", valor: "#dc2626" },
     { nombre: "Obturación", valor: "#3b82f6" },
     { nombre: "Corona", valor: "#fbbf24" },
@@ -289,11 +289,11 @@ const de = () => {
     { nombre: "Prótesis", valor: "#10b981" },
     { nombre: "Fractura", valor: "#f97316" }
   ], u = () => {
-    const t = {}, f = [1, 2, 3, 4];
-    for (let a of f)
-      for (let d = 1; d <= 8; d++) {
-        const b = `${a}${d}`;
-        t[b] = {
+    const i = {}, f = [1, 2, 3, 4, 5, 6, 7, 8];
+    for (let t of f)
+      for (let s = 1; s <= (t <= 4 ? 8 : 5); s++) {
+        const b = `${t}${s}`;
+        i[b] = {
           deshabilitado: !1,
           arriba: "#ffffff",
           centro: "#ffffff",
@@ -302,25 +302,25 @@ const de = () => {
           abajo: "#ffffff"
         };
       }
-    return t;
-  }, [m, c] = N(
+    return i;
+  }, [m, l] = R(
     u()
   );
-  return { colors: l, estadoDientes: m, cambiarColorSeccion: (t, f, a) => {
-    c((d) => {
-      const g = d[t][f] === a ? "#ffffff" : a;
+  return { colors: c, estadoDientes: m, cambiarColorSeccion: (i, f, t) => {
+    l((s) => {
+      const g = s[i][f] === t ? "#ffffff" : t;
       return {
-        ...d,
-        [t]: {
-          ...d[t],
+        ...s,
+        [i]: {
+          ...s[i],
           [f]: g
         }
       };
     });
-  }, setEstadoDientes: c };
-}, le = (l, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(l, null, 2) : l, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: l, onClick: u, colorSeleccionado: m, setColorSeleccionado: c, colores: n, handleExport: t }) => {
-  const f = (a) => {
-    c(a), u == null || u();
+  }, setEstadoDientes: l };
+}, de = (c, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: c, onClick: u, colorSeleccionado: m, setColorSeleccionado: l, colores: n, handleExport: i }) => {
+  const f = (t) => {
+    l(t), u == null || u();
   };
   return /* @__PURE__ */ r.jsx("div", { className: "header-mejorado", children: /* @__PURE__ */ r.jsxs("div", { className: "header-contenido", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "selector-color-container", children: [
@@ -337,49 +337,49 @@ const de = () => {
           /* @__PURE__ */ r.jsx("span", { className: "nombre-color-mejorado", children: m.nombre }),
           /* @__PURE__ */ r.jsx("svg", { className: "dropdown-icon", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ r.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }) })
         ] }),
-        l && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((a) => /* @__PURE__ */ r.jsxs(
+        c && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((t) => /* @__PURE__ */ r.jsxs(
           "div",
           {
             className: "combo-item-mejorado",
-            onClick: () => f(a),
+            onClick: () => f(t),
             children: [
               /* @__PURE__ */ r.jsx(
                 "div",
                 {
                   className: "cuadro-color-mejorado",
-                  style: { backgroundColor: a.valor }
+                  style: { backgroundColor: t.valor }
                 }
               ),
-              /* @__PURE__ */ r.jsx("span", { className: "nombre-color-mejorado", children: a.nombre })
+              /* @__PURE__ */ r.jsx("span", { className: "nombre-color-mejorado", children: t.nombre })
             ]
           },
-          a.valor
+          t.valor
         )) })
       ] })
     ] }),
-    /* @__PURE__ */ r.jsx("div", { className: "botones-container", children: /* @__PURE__ */ r.jsxs("button", { onClick: t, className: "boton-mejorado boton-exportar", children: [
+    /* @__PURE__ */ r.jsx("div", { className: "botones-container", children: /* @__PURE__ */ r.jsxs("button", { onClick: i, className: "boton-mejorado boton-exportar", children: [
       /* @__PURE__ */ r.jsx("svg", { className: "boton-icon", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ r.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12" }) }),
       "Guardar"
     ] }) })
   ] }) });
-}, T = ({ numero: l, cuadrante: u, colorSeleccionado: m, coloresSecciones: c, cambiarColorSeccion: n }) => {
-  const t = `${u}${l}`, [f, a] = N(null), d = (g) => {
-    n(t, g, m.valor);
-  }, b = (g, v) => ({
-    backgroundColor: c[g] || v,
+}, v = ({ numero: c, cuadrante: u, colorSeleccionado: m, coloresSecciones: l, cambiarColorSeccion: n }) => {
+  const i = `${u}${c}`, [f, t] = R(null), s = (g) => {
+    n(i, g, m.valor);
+  }, b = (g, E) => ({
+    backgroundColor: l[g] || E,
     opacity: f === g ? 0.8 : 1
   });
   return /* @__PURE__ */ r.jsxs("div", { className: "diente-container", children: [
-    /* @__PURE__ */ r.jsx("div", { className: "numero-diente-mejorado", children: t }),
+    /* @__PURE__ */ r.jsx("div", { className: "numero-diente-mejorado", children: i }),
     /* @__PURE__ */ r.jsxs("div", { className: "diente-mejorado", children: [
       /* @__PURE__ */ r.jsx(
         "div",
         {
           className: "seccion-mejorada arriba-mejorada",
           style: b("arriba", "#ffffff"),
-          onClick: () => d("arriba"),
-          onMouseEnter: () => a("arriba"),
-          onMouseLeave: () => a(null)
+          onClick: () => s("arriba"),
+          onMouseEnter: () => t("arriba"),
+          onMouseLeave: () => t(null)
         }
       ),
       /* @__PURE__ */ r.jsx(
@@ -387,9 +387,9 @@ const de = () => {
         {
           className: "seccion-mejorada abajo-mejorada",
           style: b("abajo", "#ffffff"),
-          onClick: () => d("abajo"),
-          onMouseEnter: () => a("abajo"),
-          onMouseLeave: () => a(null)
+          onClick: () => s("abajo"),
+          onMouseEnter: () => t("abajo"),
+          onMouseLeave: () => t(null)
         }
       ),
       /* @__PURE__ */ r.jsx(
@@ -397,9 +397,9 @@ const de = () => {
         {
           className: "seccion-mejorada izq-mejorada",
           style: b("izquierda", "#ffffff"),
-          onClick: () => d("izquierda"),
-          onMouseEnter: () => a("izquierda"),
-          onMouseLeave: () => a(null)
+          onClick: () => s("izquierda"),
+          onMouseEnter: () => t("izquierda"),
+          onMouseLeave: () => t(null)
         }
       ),
       /* @__PURE__ */ r.jsx(
@@ -407,9 +407,9 @@ const de = () => {
         {
           className: "seccion-mejorada der-mejorada",
           style: b("derecha", "#ffffff"),
-          onClick: () => d("derecha"),
-          onMouseEnter: () => a("derecha"),
-          onMouseLeave: () => a(null)
+          onClick: () => s("derecha"),
+          onMouseEnter: () => t("derecha"),
+          onMouseLeave: () => t(null)
         }
       ),
       /* @__PURE__ */ r.jsx(
@@ -417,26 +417,23 @@ const de = () => {
         {
           className: "centro-mejorado",
           style: b("centro", "#ffffff"),
-          onClick: () => d("centro"),
-          onMouseEnter: () => a("centro"),
-          onMouseLeave: () => a(null)
+          onClick: () => s("centro"),
+          onMouseEnter: () => t("centro"),
+          onMouseLeave: () => t(null)
         }
       ),
       /* @__PURE__ */ r.jsx("div", { className: "linea-diagonal-izq-mejorada" }),
       /* @__PURE__ */ r.jsx("div", { className: "linea-diagonal-der-mejorada" })
     ] })
   ] });
-}, me = ({ savedState: l, onSave: u }) => {
-  const { colors: m, estadoDientes: c, cambiarColorSeccion: n, setEstadoDientes: t } = de(), [f, a] = N(!1), [d, b] = N(m[0]), [g, v] = N(!1), { handleExport: E } = le(
-    c,
-    t
-  ), R = () => {
-    const i = E();
-    console.log(i), u(i);
+}, me = ({ savedState: c, onSave: u }) => {
+  const { colors: m, estadoDientes: l, cambiarColorSeccion: n, setEstadoDientes: i } = le(), [f, t] = R(!1), [s, b] = R(m[0]), [g, E] = R(!1), { handleExport: w } = de(l, i), _ = () => {
+    const a = w();
+    console.log(a), u(a);
   };
   return ne(() => {
-    l && !g && (t(l), v(!0));
-  }, [l, g]), /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
+    c == null && !g && (i(c), E(!0));
+  }, [c, g]), /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
         /* Estilos del contenedor principal */
         .odontograma-container {
@@ -847,91 +844,151 @@ const de = () => {
           font-size: 14px;
           color: #64748b;
         }
+
+        .odontograma-seccion {
+  margin-top: 64px;
+}
+        .dientes-fila-infantiles-izq{
+          display: flex;
+          gap: 8px;
+          justify-content: end
+
+}
+        .dientes-fila-infantiles-der{
+          display: flex;
+          gap: 8px;
+          justify-content: start
+
+}
       ` }),
     /* @__PURE__ */ r.jsxs("div", { className: "odontograma-container", children: [
       /* @__PURE__ */ r.jsx(
         ce,
         {
           abierto: f,
-          onClick: () => a(!f),
-          colorSeleccionado: d,
+          onClick: () => t(!f),
+          colorSeleccionado: s,
           setColorSeleccionado: b,
           colores: m,
-          handleExport: R
+          handleExport: _
         }
       ),
-      /* @__PURE__ */ r.jsxs("div", { className: "odontograma-grid", children: [
+      /* @__PURE__ */ r.jsx("div", { className: "odontograma-seccion", children: /* @__PURE__ */ r.jsxs("div", { className: "odontograma-grid", children: [
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-1", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "1" }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((i) => /* @__PURE__ */ r.jsx(
-            T,
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
             {
-              numero: i,
+              numero: a,
               cuadrante: "1",
-              colorSeleccionado: d,
-              coloresSecciones: c[`1${i}`],
+              colorSeleccionado: s,
+              coloresSecciones: l[`1${a}`],
               cambiarColorSeccion: n
             },
-            `1-${i}`
+            `1-${a}`
+          )) }),
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
+            {
+              numero: a,
+              cuadrante: "5",
+              colorSeleccionado: s,
+              coloresSecciones: l[`5${a}`],
+              cambiarColorSeccion: n
+            },
+            `5-${a}`
           )) })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-2", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "2" }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((i) => /* @__PURE__ */ r.jsx(
-            T,
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
             {
-              numero: i,
+              numero: a,
               cuadrante: "2",
-              colorSeleccionado: d,
-              coloresSecciones: c[`2${i}`],
+              colorSeleccionado: s,
+              coloresSecciones: l[`2${a}`],
               cambiarColorSeccion: n
             },
-            `2-${i}`
+            `2-${a}`
+          )) }),
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
+            {
+              numero: a,
+              cuadrante: "6",
+              colorSeleccionado: s,
+              coloresSecciones: l[`6${a}`],
+              cambiarColorSeccion: n
+            },
+            `6-${a}`
           )) })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-4", children: [
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((i) => /* @__PURE__ */ r.jsx(
-            T,
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
             {
-              numero: i,
-              cuadrante: "4",
-              colorSeleccionado: d,
-              coloresSecciones: c[`4${i}`],
+              numero: a,
+              cuadrante: "8",
+              colorSeleccionado: s,
+              coloresSecciones: l[`8${a}`],
               cambiarColorSeccion: n
             },
-            `4-${i}`
+            `8-${a}`
+          )) }),
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
+            {
+              numero: a,
+              cuadrante: "4",
+              colorSeleccionado: s,
+              coloresSecciones: l[`4${a}`],
+              cambiarColorSeccion: n
+            },
+            `4-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "4" })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-3", children: [
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((i) => /* @__PURE__ */ r.jsx(
-            T,
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
             {
-              numero: i,
-              cuadrante: "3",
-              colorSeleccionado: d,
-              coloresSecciones: c[`3${i}`],
+              numero: a,
+              cuadrante: "7",
+              colorSeleccionado: s,
+              coloresSecciones: l[`7${a}`],
               cambiarColorSeccion: n
             },
-            `3-${i}`
+            `7-${a}`
+          )) }),
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
+            v,
+            {
+              numero: a,
+              cuadrante: "3",
+              colorSeleccionado: s,
+              coloresSecciones: l[`3${a}`],
+              cambiarColorSeccion: n
+            },
+            `3-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "3" })
         ] }),
         /* @__PURE__ */ r.jsx("div", { className: "linea-vertical" }),
         /* @__PURE__ */ r.jsx("div", { className: "linea-horizontal" })
-      ] }),
+      ] }) }),
       /* @__PURE__ */ r.jsxs("div", { className: "leyenda-container", children: [
         /* @__PURE__ */ r.jsx("h3", { className: "leyenda-titulo", children: "Leyenda de Tratamientos" }),
-        /* @__PURE__ */ r.jsx("div", { className: "leyenda-grid", children: m.map((i) => /* @__PURE__ */ r.jsxs("div", { className: "leyenda-item", children: [
+        /* @__PURE__ */ r.jsx("div", { className: "leyenda-grid", children: m.map((a) => /* @__PURE__ */ r.jsxs("div", { className: "leyenda-item", children: [
           /* @__PURE__ */ r.jsx(
             "div",
             {
               className: "leyenda-color",
-              style: { backgroundColor: i.valor }
+              style: { backgroundColor: a.valor }
             }
           ),
-          /* @__PURE__ */ r.jsx("span", { className: "leyenda-texto", children: i.nombre })
-        ] }, i.valor)) })
+          /* @__PURE__ */ r.jsx("span", { className: "leyenda-texto", children: a.nombre })
+        ] }, a.valor)) })
       ] })
     ] })
   ] });

@@ -3,6 +3,7 @@ import { useColorChange } from "./hooks/useColorChange";
 import { useHandleData } from "./hooks/useHandleData";
 import { Header } from "./Components/Header";
 import { Diente } from "./Components/Diente";
+
 const Odontograma = ({ savedState, onSave }) => {
   const { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes } =
     useColorChange();
@@ -18,7 +19,7 @@ const Odontograma = ({ savedState, onSave }) => {
   };
 
   useEffect(() => {
-    if (savedState && !hidratado) {
+    if (savedState == null && !hidratado) {
       setEstadoDientes(savedState);
       setHidratado(true);
     }
