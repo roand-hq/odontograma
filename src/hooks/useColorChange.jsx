@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useColorChange = () => {
+const useColorChange = (initialState = null) => {
   const colors = [
     { nombre: "Caries", valor: "#dc2626" },
     { nombre: "Obturación", valor: "#3b82f6" },
@@ -29,8 +29,9 @@ const useColorChange = () => {
     }
     return dientes;
   };
+
   const [estadoDientes, setEstadoDientes] = useState(
-    inicializarEstadoDientes()
+    initialState || inicializarEstadoDientes()
   );
 
   const cambiarColorSeccion = (idDiente, seccion, color) => {
@@ -50,4 +51,5 @@ const useColorChange = () => {
 
   return { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes };
 };
+
 export { useColorChange };

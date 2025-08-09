@@ -6,7 +6,7 @@ import { Diente } from "./Components/Diente";
 
 const Odontograma = ({ savedState, onSave }) => {
   const { colors, estadoDientes, cambiarColorSeccion, setEstadoDientes } =
-    useColorChange();
+    useColorChange(savedState);
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
   const [hidratado, setHidratado] = useState(false);
