@@ -1,5 +1,5 @@
 import oe, { useState as R, useEffect as ne } from "react";
-var S = { exports: {} }, N = {};
+var T = { exports: {} }, N = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -14,7 +14,7 @@ function te() {
   if (F) return N;
   F = 1;
   var c = Symbol.for("react.transitional.element"), u = Symbol.for("react.fragment");
-  function m(d, n, i) {
+  function m(s, n, i) {
     var f = null;
     if (i !== void 0 && (f = "" + i), n.key !== void 0 && (f = "" + n.key), "key" in n) {
       i = {};
@@ -23,7 +23,7 @@ function te() {
     } else i = n;
     return n = i.ref, {
       $$typeof: c,
-      type: d,
+      type: s,
       key: f,
       ref: n !== void 0 ? n : null,
       props: i
@@ -50,7 +50,7 @@ function ie() {
         return e.$$typeof === ee ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case T:
+        case S:
           return "Fragment";
         case G:
           return "Profiler";
@@ -107,8 +107,8 @@ function ie() {
         ), u(e);
       }
     }
-    function d(e) {
-      if (e === T) return "<>";
+    function s(e) {
+      if (e === S) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === z)
         return "<...>";
       try {
@@ -144,7 +144,7 @@ function ie() {
         configurable: !0
       });
     }
-    function s() {
+    function d() {
       var e = c(this.type);
       return Y[e] || (Y[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
@@ -159,7 +159,7 @@ function ie() {
         _owner: j
       }, (l !== void 0 ? l : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: s
+        get: d
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function E(e) {
       typeof e == "object" && e !== null && e.$$typeof === _ && e._store && (e._store.validated = 1);
     }
-    var w = oe, _ = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = w.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
+    var w = oe, _ = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = w.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
     w = {
@@ -246,8 +246,8 @@ React keys must be passed directly to JSX without using spread:
     var L, Y = {}, q = w["react-stack-bottom-frame"].bind(
       w,
       i
-    )(), D = A(d(i)), I = {};
-    k.Fragment = T, k.jsx = function(e, o, l, p, j) {
+    )(), D = A(s(i)), I = {};
+    k.Fragment = S, k.jsx = function(e, o, l, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
@@ -257,7 +257,7 @@ React keys must be passed directly to JSX without using spread:
         p,
         j,
         h ? Error("react-stack-top-frame") : q,
-        h ? A(d(e)) : D
+        h ? A(s(e)) : D
       );
     }, k.jsxs = function(e, o, l, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
@@ -269,14 +269,14 @@ React keys must be passed directly to JSX without using spread:
         p,
         j,
         h ? Error("react-stack-top-frame") : q,
-        h ? A(d(e)) : D
+        h ? A(s(e)) : D
       );
     };
   }()), k;
 }
 var U;
 function se() {
-  return U || (U = 1, process.env.NODE_ENV === "production" ? S.exports = te() : S.exports = ie()), S.exports;
+  return U || (U = 1, process.env.NODE_ENV === "production" ? T.exports = te() : T.exports = ie()), T.exports;
 }
 var r = se();
 const de = () => {
@@ -291,8 +291,8 @@ const de = () => {
   ], u = () => {
     const i = {}, f = [1, 2, 3, 4, 5, 6, 7, 8];
     for (let t of f)
-      for (let s = 1; s <= (t <= 4 ? 8 : 5); s++) {
-        const b = `${t}${s}`;
+      for (let d = 1; d <= (t <= 4 ? 8 : 5); d++) {
+        const b = `${t}${d}`;
         i[b] = {
           deshabilitado: !1,
           arriba: "#ffffff",
@@ -303,24 +303,24 @@ const de = () => {
         };
       }
     return i;
-  }, [m, d] = R(
+  }, [m, s] = R(
     u()
   );
   return { colors: c, estadoDientes: m, cambiarColorSeccion: (i, f, t) => {
-    d((s) => {
-      const g = s[i][f] === t ? "#ffffff" : t;
+    s((d) => {
+      const g = d[i][f] === t ? "#ffffff" : t;
       return {
-        ...s,
+        ...d,
         [i]: {
-          ...s[i],
+          ...d[i],
           [f]: g
         }
       };
     });
-  }, setEstadoDientes: d };
-}, le = (c, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: c, onClick: u, colorSeleccionado: m, setColorSeleccionado: d, colores: n, handleExport: i }) => {
+  }, setEstadoDientes: s };
+}, le = (c, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: c, onClick: u, colorSeleccionado: m, setColorSeleccionado: s, colores: n, handleExport: i }) => {
   const f = (t) => {
-    d(t), u == null || u();
+    s(t), u == null || u();
   };
   return /* @__PURE__ */ r.jsx("div", { className: "header-mejorado", children: /* @__PURE__ */ r.jsxs("div", { className: "header-contenido", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "selector-color-container", children: [
@@ -362,11 +362,11 @@ const de = () => {
       "Guardar"
     ] }) })
   ] }) });
-}, v = ({ numero: c, cuadrante: u, colorSeleccionado: m, coloresSecciones: d, cambiarColorSeccion: n }) => {
-  const i = `${u}${c}`, [f, t] = R(null), s = (g) => {
+}, v = ({ numero: c, cuadrante: u, colorSeleccionado: m, coloresSecciones: s, cambiarColorSeccion: n }) => {
+  const i = `${u}${c}`, [f, t] = R(null), d = (g) => {
     n(i, g, m.valor);
   }, b = (g, E) => ({
-    backgroundColor: d[g] || E,
+    backgroundColor: s[g] || E,
     opacity: f === g ? 0.8 : 1
   });
   return /* @__PURE__ */ r.jsxs("div", { className: "diente-container", children: [
@@ -377,7 +377,7 @@ const de = () => {
         {
           className: "seccion-mejorada arriba-mejorada",
           style: b("arriba", "#ffffff"),
-          onClick: () => s("arriba"),
+          onClick: () => d("arriba"),
           onMouseEnter: () => t("arriba"),
           onMouseLeave: () => t(null)
         }
@@ -387,7 +387,7 @@ const de = () => {
         {
           className: "seccion-mejorada abajo-mejorada",
           style: b("abajo", "#ffffff"),
-          onClick: () => s("abajo"),
+          onClick: () => d("abajo"),
           onMouseEnter: () => t("abajo"),
           onMouseLeave: () => t(null)
         }
@@ -397,7 +397,7 @@ const de = () => {
         {
           className: "seccion-mejorada izq-mejorada",
           style: b("izquierda", "#ffffff"),
-          onClick: () => s("izquierda"),
+          onClick: () => d("izquierda"),
           onMouseEnter: () => t("izquierda"),
           onMouseLeave: () => t(null)
         }
@@ -407,7 +407,7 @@ const de = () => {
         {
           className: "seccion-mejorada der-mejorada",
           style: b("derecha", "#ffffff"),
-          onClick: () => s("derecha"),
+          onClick: () => d("derecha"),
           onMouseEnter: () => t("derecha"),
           onMouseLeave: () => t(null)
         }
@@ -417,7 +417,7 @@ const de = () => {
         {
           className: "centro-mejorado",
           style: b("centro", "#ffffff"),
-          onClick: () => s("centro"),
+          onClick: () => d("centro"),
           onMouseEnter: () => t("centro"),
           onMouseLeave: () => t(null)
         }
@@ -427,13 +427,13 @@ const de = () => {
     ] })
   ] });
 }, me = ({ savedState: c, onSave: u }) => {
-  const { colors: m, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: i } = de(), [f, t] = R(!1), [s, b] = R(m[0]), [g, E] = R(!1), { handleExport: w } = le(d, i), _ = () => {
+  const { colors: m, estadoDientes: s, cambiarColorSeccion: n, setEstadoDientes: i } = de(), [f, t] = R(!1), [d, b] = R(m[0]), [g, E] = R(!1), { handleExport: w } = le(s, i), _ = () => {
     const a = w();
     console.log(a), u(a);
   };
   return ne(() => {
-    g || (i(c || {}), E(!0));
-  }, [c, g]), /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
+    g || (i(c || s), E(!0));
+  }, [c, g, s, i]), /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
         /* Estilos del contenedor principal */
         .odontograma-container {
@@ -867,7 +867,7 @@ const de = () => {
         {
           abierto: f,
           onClick: () => t(!f),
-          colorSeleccionado: s,
+          colorSeleccionado: d,
           setColorSeleccionado: b,
           colores: m,
           handleExport: _
@@ -881,8 +881,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "1",
-              colorSeleccionado: s,
-              coloresSecciones: d[`1${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`1${a}`],
               cambiarColorSeccion: n
             },
             `1-${a}`
@@ -892,8 +892,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "5",
-              colorSeleccionado: s,
-              coloresSecciones: d[`5${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`5${a}`],
               cambiarColorSeccion: n
             },
             `5-${a}`
@@ -906,8 +906,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "2",
-              colorSeleccionado: s,
-              coloresSecciones: d[`2${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`2${a}`],
               cambiarColorSeccion: n
             },
             `2-${a}`
@@ -917,8 +917,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "6",
-              colorSeleccionado: s,
-              coloresSecciones: d[`6${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`6${a}`],
               cambiarColorSeccion: n
             },
             `6-${a}`
@@ -930,8 +930,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "8",
-              colorSeleccionado: s,
-              coloresSecciones: d[`8${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`8${a}`],
               cambiarColorSeccion: n
             },
             `8-${a}`
@@ -941,8 +941,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "4",
-              colorSeleccionado: s,
-              coloresSecciones: d[`4${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`4${a}`],
               cambiarColorSeccion: n
             },
             `4-${a}`
@@ -955,8 +955,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "7",
-              colorSeleccionado: s,
-              coloresSecciones: d[`7${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`7${a}`],
               cambiarColorSeccion: n
             },
             `7-${a}`
@@ -966,8 +966,8 @@ const de = () => {
             {
               numero: a,
               cuadrante: "3",
-              colorSeleccionado: s,
-              coloresSecciones: d[`3${a}`],
+              colorSeleccionado: d,
+              coloresSecciones: s[`3${a}`],
               cambiarColorSeccion: n
             },
             `3-${a}`

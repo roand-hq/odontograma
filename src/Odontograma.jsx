@@ -18,12 +18,17 @@ const Odontograma = ({ savedState, onSave }) => {
     onSave(datos);
   };
 
-  useEffect(() => {
-  if (!hidratado) {
-    setEstadoDientes(savedState || {}); // si es null, usa {}
-    setHidratado(true);
-  }
-}, [savedState, hidratado]);
+   useEffect(() => {
+    if (!hidratado) {
+      if (savedState) {
+        setEstadoDientes(savedState);
+      } else {
+        // Si savedState es null o undefined, inicializamos con el estado por defecto
+        setEstadoDientes(estadoDientes);
+      }
+      setHidratado(true);
+    }
+  }, [savedState, hidratado, estadoDientes, setEstadoDientes]);
   return (
     <>
       <style>{`
