@@ -9,7 +9,6 @@ const Odontograma = ({ savedState, onSave }) => {
     useColorChange(savedState);
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
-  const [hidratado, setHidratado] = useState(false);
 
   const { handleExport } = useHandleData(estadoDientes, setEstadoDientes);
   const handleGuardar = () => {
@@ -18,17 +17,6 @@ const Odontograma = ({ savedState, onSave }) => {
     onSave(datos);
   };
 
-   useEffect(() => {
-  if (!hidratado) {
-    if (savedState) {
-      setEstadoDientes(savedState);
-    } else {
-      // Inicializar con estado por defecto llamando a la función que tienes en useColorChange
-      setEstadoDientes(inicializarEstadoDientes());
-    }
-    setHidratado(true);
-  }
-}, [savedState, hidratado]);
   return (
     <>
       <style>{`
