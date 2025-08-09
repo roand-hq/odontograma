@@ -1,4 +1,4 @@
-import oe, { useState as R } from "react";
+import oe, { useState as R, useEffect as ne } from "react";
 var k = { exports: {} }, y = {};
 /**
  * @license React
@@ -10,21 +10,21 @@ var k = { exports: {} }, y = {};
  * LICENSE file in the root directory of this source tree.
  */
 var I;
-function ne() {
+function te() {
   if (I) return y;
   I = 1;
-  var c = Symbol.for("react.transitional.element"), m = Symbol.for("react.fragment");
-  function f(l, n, u) {
-    var d = null;
-    if (u !== void 0 && (d = "" + u), n.key !== void 0 && (d = "" + n.key), "key" in n) {
+  var l = Symbol.for("react.transitional.element"), m = Symbol.for("react.fragment");
+  function f(d, n, u) {
+    var c = null;
+    if (u !== void 0 && (c = "" + u), n.key !== void 0 && (c = "" + n.key), "key" in n) {
       u = {};
       for (var t in n)
         t !== "key" && (u[t] = n[t]);
     } else u = n;
     return n = u.ref, {
-      $$typeof: c,
-      type: l,
-      key: d,
+      $$typeof: l,
+      type: d,
+      key: c,
       ref: n !== void 0 ? n : null,
       props: u
     };
@@ -42,9 +42,9 @@ var N = {};
  * LICENSE file in the root directory of this source tree.
  */
 var F;
-function te() {
+function ie() {
   return F || (F = 1, process.env.NODE_ENV !== "production" && function() {
-    function c(e) {
+    function l(e) {
       if (e == null) return null;
       if (typeof e == "function")
         return e.$$typeof === ee ? null : e.displayName || e.name || null;
@@ -77,11 +77,11 @@ function te() {
             var o = e.render;
             return e = e.displayName, e || (e = o.displayName || o.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case Q:
-            return o = e.displayName || null, o !== null ? o : c(e.type) || "Memo";
+            return o = e.displayName || null, o !== null ? o : l(e.type) || "Memo";
           case $:
             o = e._payload, e = e._init;
             try {
-              return c(e(o));
+              return l(e(o));
             } catch {
             }
         }
@@ -107,25 +107,25 @@ function te() {
         ), m(e);
       }
     }
-    function l(e) {
+    function d(e) {
       if (e === _) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === $)
         return "<...>";
       try {
-        var o = c(e);
+        var o = l(e);
         return o ? "<" + o + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
     function n() {
-      var e = S.A;
+      var e = T.A;
       return e === null ? null : e.getOwner();
     }
     function u() {
       return Error("react-stack-top-frame");
     }
-    function d(e) {
+    function c(e) {
       if (z.call(e, "key")) {
         var o = Object.getOwnPropertyDescriptor(e, "key").get;
         if (o && o.isReactWarning) return !1;
@@ -145,7 +145,7 @@ function te() {
       });
     }
     function i() {
-      var e = c(this.type);
+      var e = l(this.type);
       return L[e] || (L[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
@@ -196,7 +196,7 @@ function te() {
             );
         else j(b);
       if (z.call(o, "key")) {
-        b = c(e);
+        b = l(e);
         var w = Object.keys(o).filter(function(ae) {
           return ae !== "key";
         });
@@ -213,7 +213,7 @@ React keys must be passed directly to JSX without using spread:
           b
         ), D[b + x] = !0);
       }
-      if (b = null, s !== void 0 && (f(s), b = "" + s), d(o) && (f(o.key), b = "" + o.key), "key" in o) {
+      if (b = null, s !== void 0 && (f(s), b = "" + s), c(o) && (f(o.key), b = "" + o.key), "key" in o) {
         s = {};
         for (var C in o)
           C !== "key" && (s[C] = o[C]);
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function j(e) {
       typeof e == "object" && e !== null && e.$$typeof === P && e._store && (e._store.validated = 1);
     }
-    var a = oe, P = Symbol.for("react.transitional.element"), U = Symbol.for("react.portal"), _ = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), X = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), S = a.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, z = Object.prototype.hasOwnProperty, re = Array.isArray, T = console.createTask ? console.createTask : function() {
+    var a = oe, P = Symbol.for("react.transitional.element"), U = Symbol.for("react.portal"), _ = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), X = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), T = a.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, z = Object.prototype.hasOwnProperty, re = Array.isArray, S = console.createTask ? console.createTask : function() {
       return null;
     };
     a = {
@@ -246,9 +246,9 @@ React keys must be passed directly to JSX without using spread:
     var M, L = {}, Y = a["react-stack-bottom-frame"].bind(
       a,
       u
-    )(), q = T(l(u)), D = {};
+    )(), q = S(d(u)), D = {};
     N.Fragment = _, N.jsx = function(e, o, s, x, v) {
-      var h = 1e4 > S.recentlyCreatedOwnerStacks++;
+      var h = 1e4 > T.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
@@ -257,10 +257,10 @@ React keys must be passed directly to JSX without using spread:
         x,
         v,
         h ? Error("react-stack-top-frame") : Y,
-        h ? T(l(e)) : q
+        h ? S(d(e)) : q
       );
     }, N.jsxs = function(e, o, s, x, v) {
-      var h = 1e4 > S.recentlyCreatedOwnerStacks++;
+      var h = 1e4 > T.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
@@ -269,17 +269,17 @@ React keys must be passed directly to JSX without using spread:
         x,
         v,
         h ? Error("react-stack-top-frame") : Y,
-        h ? T(l(e)) : q
+        h ? S(d(e)) : q
       );
     };
   }()), N;
 }
 var W;
-function ie() {
-  return W || (W = 1, process.env.NODE_ENV === "production" ? k.exports = ne() : k.exports = te()), k.exports;
+function se() {
+  return W || (W = 1, process.env.NODE_ENV === "production" ? k.exports = te() : k.exports = ie()), k.exports;
 }
-var r = ie();
-const se = (c = null) => {
+var r = se();
+const de = (l = null) => {
   const m = [
     { nombre: "Caries", valor: "#dc2626" },
     { nombre: "Obturación", valor: "#3b82f6" },
@@ -289,11 +289,11 @@ const se = (c = null) => {
     { nombre: "Prótesis", valor: "#10b981" },
     { nombre: "Fractura", valor: "#f97316" }
   ], f = () => {
-    const d = {}, t = [1, 2, 3, 4, 5, 6, 7, 8];
+    const c = {}, t = [1, 2, 3, 4, 5, 6, 7, 8];
     for (let i of t)
       for (let p = 1; p <= (i <= 4 ? 8 : 5); p++) {
         const g = `${i}${p}`;
-        d[g] = {
+        c[g] = {
           deshabilitado: !1,
           arriba: "#ffffff",
           centro: "#ffffff",
@@ -302,25 +302,27 @@ const se = (c = null) => {
           abajo: "#ffffff"
         };
       }
-    return d;
-  }, [l, n] = R(
-    c || f()
+    return c;
+  }, [d, n] = R(
+    l || f()
   );
-  return { colors: m, estadoDientes: l, cambiarColorSeccion: (d, t, i) => {
+  return ne(() => {
+    l && n(l);
+  }, [l]), { colors: m, estadoDientes: d, cambiarColorSeccion: (c, t, i) => {
     n((p) => {
-      const j = p[d][t] === i ? "#ffffff" : i;
+      const j = p[c][t] === i ? "#ffffff" : i;
       return {
         ...p,
-        [d]: {
-          ...p[d],
+        [c]: {
+          ...p[c],
           [t]: j
         }
       };
     });
   }, setEstadoDientes: n };
-}, le = (c, m) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (m(n), !0) }), de = ({ abierto: c, onClick: m, colorSeleccionado: f, setColorSeleccionado: l, colores: n, handleExport: u }) => {
-  const d = (t) => {
-    l(t), m == null || m();
+}, le = (l, m) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(l, null, 2) : l, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (m(n), !0) }), ce = ({ abierto: l, onClick: m, colorSeleccionado: f, setColorSeleccionado: d, colores: n, handleExport: u }) => {
+  const c = (t) => {
+    d(t), m == null || m();
   };
   return /* @__PURE__ */ r.jsx("div", { className: "header-mejorado", children: /* @__PURE__ */ r.jsxs("div", { className: "header-contenido", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "selector-color-container", children: [
@@ -337,11 +339,11 @@ const se = (c = null) => {
           /* @__PURE__ */ r.jsx("span", { className: "nombre-color-mejorado", children: f.nombre }),
           /* @__PURE__ */ r.jsx("svg", { className: "dropdown-icon", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ r.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }) })
         ] }),
-        c && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((t) => /* @__PURE__ */ r.jsxs(
+        l && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((t) => /* @__PURE__ */ r.jsxs(
           "div",
           {
             className: "combo-item-mejorado",
-            onClick: () => d(t),
+            onClick: () => c(t),
             children: [
               /* @__PURE__ */ r.jsx(
                 "div",
@@ -362,12 +364,12 @@ const se = (c = null) => {
       "Guardar"
     ] }) })
   ] }) });
-}, E = ({ numero: c, cuadrante: m, colorSeleccionado: f, coloresSecciones: l, cambiarColorSeccion: n }) => {
-  const u = `${m}${c}`, [d, t] = R(null), i = (g) => {
+}, E = ({ numero: l, cuadrante: m, colorSeleccionado: f, coloresSecciones: d, cambiarColorSeccion: n }) => {
+  const u = `${m}${l}`, [c, t] = R(null), i = (g) => {
     n(u, g, f.valor);
   }, p = (g, j) => ({
-    backgroundColor: l[g] || j,
-    opacity: d === g ? 0.8 : 1
+    backgroundColor: d[g] || j,
+    opacity: c === g ? 0.8 : 1
   });
   return /* @__PURE__ */ r.jsxs("div", { className: "diente-container", children: [
     /* @__PURE__ */ r.jsx("div", { className: "numero-diente-mejorado", children: u }),
@@ -426,8 +428,8 @@ const se = (c = null) => {
       /* @__PURE__ */ r.jsx("div", { className: "linea-diagonal-der-mejorada" })
     ] })
   ] });
-}, ue = ({ savedState: c, onSave: m }) => {
-  const { colors: f, estadoDientes: l, cambiarColorSeccion: n, setEstadoDientes: u } = se(c), [d, t] = R(!1), [i, p] = R(f[0]), { handleExport: g } = le(l, u), j = () => {
+}, me = ({ savedState: l, onSave: m }) => {
+  const { colors: f, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: u } = de(l), [c, t] = R(!1), [i, p] = R(f[0]), { handleExport: g } = le(d, u), j = () => {
     const a = g();
     console.log(a), m(a);
   };
@@ -861,10 +863,10 @@ const se = (c = null) => {
       ` }),
     /* @__PURE__ */ r.jsxs("div", { className: "odontograma-container", children: [
       /* @__PURE__ */ r.jsx(
-        de,
+        ce,
         {
-          abierto: d,
-          onClick: () => t(!d),
+          abierto: c,
+          onClick: () => t(!c),
           colorSeleccionado: i,
           setColorSeleccionado: p,
           colores: f,
@@ -880,7 +882,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "1",
               colorSeleccionado: i,
-              coloresSecciones: l[`1${a}`],
+              coloresSecciones: d[`1${a}`],
               cambiarColorSeccion: n
             },
             `1-${a}`
@@ -891,7 +893,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "5",
               colorSeleccionado: i,
-              coloresSecciones: l[`5${a}`],
+              coloresSecciones: d[`5${a}`],
               cambiarColorSeccion: n
             },
             `5-${a}`
@@ -905,7 +907,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "2",
               colorSeleccionado: i,
-              coloresSecciones: l[`2${a}`],
+              coloresSecciones: d[`2${a}`],
               cambiarColorSeccion: n
             },
             `2-${a}`
@@ -916,7 +918,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "6",
               colorSeleccionado: i,
-              coloresSecciones: l[`6${a}`],
+              coloresSecciones: d[`6${a}`],
               cambiarColorSeccion: n
             },
             `6-${a}`
@@ -929,7 +931,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "8",
               colorSeleccionado: i,
-              coloresSecciones: l[`8${a}`],
+              coloresSecciones: d[`8${a}`],
               cambiarColorSeccion: n
             },
             `8-${a}`
@@ -940,7 +942,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "4",
               colorSeleccionado: i,
-              coloresSecciones: l[`4${a}`],
+              coloresSecciones: d[`4${a}`],
               cambiarColorSeccion: n
             },
             `4-${a}`
@@ -954,7 +956,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "7",
               colorSeleccionado: i,
-              coloresSecciones: l[`7${a}`],
+              coloresSecciones: d[`7${a}`],
               cambiarColorSeccion: n
             },
             `7-${a}`
@@ -965,7 +967,7 @@ const se = (c = null) => {
               numero: a,
               cuadrante: "3",
               colorSeleccionado: i,
-              coloresSecciones: l[`3${a}`],
+              coloresSecciones: d[`3${a}`],
               cambiarColorSeccion: n
             },
             `3-${a}`
@@ -992,5 +994,5 @@ const se = (c = null) => {
   ] });
 };
 export {
-  ue as default
+  me as default
 };

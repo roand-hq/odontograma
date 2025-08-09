@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useColorChange = (initialState = null) => {
   const colors = [
@@ -33,6 +33,12 @@ const useColorChange = (initialState = null) => {
   const [estadoDientes, setEstadoDientes] = useState(
     initialState || inicializarEstadoDientes()
   );
+
+  useEffect(() => {
+    if (initialState) {
+      setEstadoDientes(initialState);
+    }
+  }, [initialState]);
 
   const cambiarColorSeccion = (idDiente, seccion, color) => {
     setEstadoDientes((prev) => {
