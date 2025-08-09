@@ -1,5 +1,5 @@
 import oe, { useState as R, useEffect as ne } from "react";
-var T = { exports: {} }, N = {};
+var S = { exports: {} }, N = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -14,7 +14,7 @@ function te() {
   if (F) return N;
   F = 1;
   var c = Symbol.for("react.transitional.element"), u = Symbol.for("react.fragment");
-  function m(l, n, i) {
+  function m(d, n, i) {
     var f = null;
     if (i !== void 0 && (f = "" + i), n.key !== void 0 && (f = "" + n.key), "key" in n) {
       i = {};
@@ -23,7 +23,7 @@ function te() {
     } else i = n;
     return n = i.ref, {
       $$typeof: c,
-      type: l,
+      type: d,
       key: f,
       ref: n !== void 0 ? n : null,
       props: i
@@ -50,7 +50,7 @@ function ie() {
         return e.$$typeof === ee ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case S:
+        case T:
           return "Fragment";
         case G:
           return "Profiler";
@@ -99,16 +99,16 @@ function ie() {
       }
       if (o) {
         o = console;
-        var d = o.error, p = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
-        return d.call(
+        var l = o.error, p = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        return l.call(
           o,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           p
         ), u(e);
       }
     }
-    function l(e) {
-      if (e === S) return "<>";
+    function d(e) {
+      if (e === T) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === z)
         return "<...>";
       try {
@@ -133,14 +133,14 @@ function ie() {
       return e.key !== void 0;
     }
     function t(e, o) {
-      function d() {
+      function l() {
         L || (L = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           o
         ));
       }
-      d.isReactWarning = !0, Object.defineProperty(e, "key", {
-        get: d,
+      l.isReactWarning = !0, Object.defineProperty(e, "key", {
+        get: l,
         configurable: !0
       });
     }
@@ -150,14 +150,14 @@ function ie() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function b(e, o, d, p, j, h, C, P) {
-      return d = h.ref, e = {
+    function b(e, o, l, p, j, h, C, P) {
+      return l = h.ref, e = {
         $$typeof: _,
         type: e,
         key: o,
         props: h,
         _owner: j
-      }, (d !== void 0 ? d : null) !== null ? Object.defineProperty(e, "ref", {
+      }, (l !== void 0 ? l : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
         get: s
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
@@ -182,7 +182,7 @@ function ie() {
         value: P
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, o, d, p, j, h, C, P) {
+    function g(e, o, l, p, j, h, C, P) {
       var x = o.children;
       if (x !== void 0)
         if (p)
@@ -213,13 +213,13 @@ React keys must be passed directly to JSX without using spread:
           x
         ), I[x + p] = !0);
       }
-      if (x = null, d !== void 0 && (m(d), x = "" + d), f(o) && (m(o.key), x = "" + o.key), "key" in o) {
-        d = {};
+      if (x = null, l !== void 0 && (m(l), x = "" + l), f(o) && (m(o.key), x = "" + o.key), "key" in o) {
+        l = {};
         for (var $ in o)
-          $ !== "key" && (d[$] = o[$]);
-      } else d = o;
+          $ !== "key" && (l[$] = o[$]);
+      } else l = o;
       return x && t(
-        d,
+        l,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), b(
         e,
@@ -227,7 +227,7 @@ React keys must be passed directly to JSX without using spread:
         h,
         j,
         n(),
-        d,
+        l,
         C,
         P
       );
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function E(e) {
       typeof e == "object" && e !== null && e.$$typeof === _ && e._store && (e._store.validated = 1);
     }
-    var w = oe, _ = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), S = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = w.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
+    var w = oe, _ = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), H = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), O = w.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, M = Object.prototype.hasOwnProperty, re = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
     w = {
@@ -246,40 +246,40 @@ React keys must be passed directly to JSX without using spread:
     var L, Y = {}, q = w["react-stack-bottom-frame"].bind(
       w,
       i
-    )(), D = A(l(i)), I = {};
-    k.Fragment = S, k.jsx = function(e, o, d, p, j) {
+    )(), D = A(d(i)), I = {};
+    k.Fragment = T, k.jsx = function(e, o, l, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
-        d,
+        l,
         !1,
         p,
         j,
         h ? Error("react-stack-top-frame") : q,
-        h ? A(l(e)) : D
+        h ? A(d(e)) : D
       );
-    }, k.jsxs = function(e, o, d, p, j) {
+    }, k.jsxs = function(e, o, l, p, j) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
-        d,
+        l,
         !0,
         p,
         j,
         h ? Error("react-stack-top-frame") : q,
-        h ? A(l(e)) : D
+        h ? A(d(e)) : D
       );
     };
   }()), k;
 }
 var U;
 function se() {
-  return U || (U = 1, process.env.NODE_ENV === "production" ? T.exports = te() : T.exports = ie()), T.exports;
+  return U || (U = 1, process.env.NODE_ENV === "production" ? S.exports = te() : S.exports = ie()), S.exports;
 }
 var r = se();
-const le = () => {
+const de = () => {
   const c = [
     { nombre: "Caries", valor: "#dc2626" },
     { nombre: "Obturación", valor: "#3b82f6" },
@@ -303,11 +303,11 @@ const le = () => {
         };
       }
     return i;
-  }, [m, l] = R(
+  }, [m, d] = R(
     u()
   );
   return { colors: c, estadoDientes: m, cambiarColorSeccion: (i, f, t) => {
-    l((s) => {
+    d((s) => {
       const g = s[i][f] === t ? "#ffffff" : t;
       return {
         ...s,
@@ -317,10 +317,10 @@ const le = () => {
         }
       };
     });
-  }, setEstadoDientes: l };
-}, de = (c, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: c, onClick: u, colorSeleccionado: m, setColorSeleccionado: l, colores: n, handleExport: i }) => {
+  }, setEstadoDientes: d };
+}, le = (c, u) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(c, null, 2) : c, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (u(n), !0) }), ce = ({ abierto: c, onClick: u, colorSeleccionado: m, setColorSeleccionado: d, colores: n, handleExport: i }) => {
   const f = (t) => {
-    l(t), u == null || u();
+    d(t), u == null || u();
   };
   return /* @__PURE__ */ r.jsx("div", { className: "header-mejorado", children: /* @__PURE__ */ r.jsxs("div", { className: "header-contenido", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "selector-color-container", children: [
@@ -362,11 +362,11 @@ const le = () => {
       "Guardar"
     ] }) })
   ] }) });
-}, v = ({ numero: c, cuadrante: u, colorSeleccionado: m, coloresSecciones: l, cambiarColorSeccion: n }) => {
+}, v = ({ numero: c, cuadrante: u, colorSeleccionado: m, coloresSecciones: d, cambiarColorSeccion: n }) => {
   const i = `${u}${c}`, [f, t] = R(null), s = (g) => {
     n(i, g, m.valor);
   }, b = (g, E) => ({
-    backgroundColor: l[g] || E,
+    backgroundColor: d[g] || E,
     opacity: f === g ? 0.8 : 1
   });
   return /* @__PURE__ */ r.jsxs("div", { className: "diente-container", children: [
@@ -427,12 +427,12 @@ const le = () => {
     ] })
   ] });
 }, me = ({ savedState: c, onSave: u }) => {
-  const { colors: m, estadoDientes: l, cambiarColorSeccion: n, setEstadoDientes: i } = le(), [f, t] = R(!1), [s, b] = R(m[0]), [g, E] = R(!1), { handleExport: w } = de(l, i), _ = () => {
+  const { colors: m, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: i } = de(), [f, t] = R(!1), [s, b] = R(m[0]), [g, E] = R(!1), { handleExport: w } = le(d, i), _ = () => {
     const a = w();
     console.log(a), u(a);
   };
   return ne(() => {
-    c == null && !g && (i(c), E(!0));
+    g || (i(c || {}), E(!0));
   }, [c, g]), /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
         /* Estilos del contenedor principal */
@@ -882,7 +882,7 @@ const le = () => {
               numero: a,
               cuadrante: "1",
               colorSeleccionado: s,
-              coloresSecciones: l[`1${a}`],
+              coloresSecciones: d[`1${a}`],
               cambiarColorSeccion: n
             },
             `1-${a}`
@@ -893,7 +893,7 @@ const le = () => {
               numero: a,
               cuadrante: "5",
               colorSeleccionado: s,
-              coloresSecciones: l[`5${a}`],
+              coloresSecciones: d[`5${a}`],
               cambiarColorSeccion: n
             },
             `5-${a}`
@@ -907,7 +907,7 @@ const le = () => {
               numero: a,
               cuadrante: "2",
               colorSeleccionado: s,
-              coloresSecciones: l[`2${a}`],
+              coloresSecciones: d[`2${a}`],
               cambiarColorSeccion: n
             },
             `2-${a}`
@@ -918,7 +918,7 @@ const le = () => {
               numero: a,
               cuadrante: "6",
               colorSeleccionado: s,
-              coloresSecciones: l[`6${a}`],
+              coloresSecciones: d[`6${a}`],
               cambiarColorSeccion: n
             },
             `6-${a}`
@@ -931,7 +931,7 @@ const le = () => {
               numero: a,
               cuadrante: "8",
               colorSeleccionado: s,
-              coloresSecciones: l[`8${a}`],
+              coloresSecciones: d[`8${a}`],
               cambiarColorSeccion: n
             },
             `8-${a}`
@@ -942,7 +942,7 @@ const le = () => {
               numero: a,
               cuadrante: "4",
               colorSeleccionado: s,
-              coloresSecciones: l[`4${a}`],
+              coloresSecciones: d[`4${a}`],
               cambiarColorSeccion: n
             },
             `4-${a}`
@@ -956,7 +956,7 @@ const le = () => {
               numero: a,
               cuadrante: "7",
               colorSeleccionado: s,
-              coloresSecciones: l[`7${a}`],
+              coloresSecciones: d[`7${a}`],
               cambiarColorSeccion: n
             },
             `7-${a}`
@@ -967,7 +967,7 @@ const le = () => {
               numero: a,
               cuadrante: "3",
               colorSeleccionado: s,
-              coloresSecciones: l[`3${a}`],
+              coloresSecciones: d[`3${a}`],
               cambiarColorSeccion: n
             },
             `3-${a}`

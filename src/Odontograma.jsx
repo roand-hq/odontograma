@@ -19,11 +19,11 @@ const Odontograma = ({ savedState, onSave }) => {
   };
 
   useEffect(() => {
-    if (savedState == null && !hidratado) {
-      setEstadoDientes(savedState);
-      setHidratado(true);
-    }
-  }, [savedState, hidratado]);
+  if (!hidratado) {
+    setEstadoDientes(savedState || {}); // si es null, usa {}
+    setHidratado(true);
+  }
+}, [savedState, hidratado]);
   return (
     <>
       <style>{`
