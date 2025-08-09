@@ -431,7 +431,7 @@ const de = (l = null) => {
 }, me = ({ savedState: l, onSave: m }) => {
   const { colors: f, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: u } = de(l), [c, t] = R(!1), [i, p] = R(f[0]), { handleExport: g } = le(d, u), j = () => {
     const a = g();
-    console.log(a), m(a);
+    m(a);
   };
   return /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
@@ -440,7 +440,7 @@ const de = (l = null) => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 24px;
-          background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+          background: #f9fafb;
           min-height: 100vh;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
         }

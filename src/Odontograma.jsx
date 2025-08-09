@@ -13,7 +13,7 @@ const Odontograma = ({ savedState, onSave }) => {
   const { handleExport } = useHandleData(estadoDientes, setEstadoDientes);
   const handleGuardar = () => {
     const datos = handleExport();
-    console.log(datos);
+ 
     onSave(datos);
   };
 
@@ -25,7 +25,7 @@ const Odontograma = ({ savedState, onSave }) => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 24px;
-          background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+          background: #f9fafb;
           min-height: 100vh;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
         }
