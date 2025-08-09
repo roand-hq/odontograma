@@ -19,16 +19,16 @@ const Odontograma = ({ savedState, onSave }) => {
   };
 
    useEffect(() => {
-    if (!hidratado) {
-      if (savedState) {
-        setEstadoDientes(savedState);
-      } else {
-        // Si savedState es null o undefined, inicializamos con el estado por defecto
-        setEstadoDientes(estadoDientes);
-      }
-      setHidratado(true);
+  if (!hidratado) {
+    if (savedState) {
+      setEstadoDientes(savedState);
+    } else {
+      // Inicializar con estado por defecto llamando a la función que tienes en useColorChange
+      setEstadoDientes(inicializarEstadoDientes());
     }
-  }, [savedState, hidratado, estadoDientes, setEstadoDientes]);
+    setHidratado(true);
+  }
+}, [savedState, hidratado]);
   return (
     <>
       <style>{`
