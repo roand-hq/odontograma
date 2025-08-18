@@ -1,5 +1,5 @@
 import oe, { useState as R, useEffect as ne } from "react";
-var k = { exports: {} }, y = {};
+var N = { exports: {} }, y = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -31,7 +31,7 @@ function te() {
   }
   return y.Fragment = m, y.jsx = f, y.jsxs = f, y;
 }
-var N = {};
+var k = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -150,7 +150,7 @@ function ie() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function p(e, o, s, x, v, h, O, A) {
+    function p(e, o, s, x, v, h, O, C) {
       return s = h.ref, e = {
         $$typeof: P,
         type: e,
@@ -179,10 +179,10 @@ function ie() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: A
+        value: C
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, o, s, x, v, h, O, A) {
+    function g(e, o, s, x, v, h, O, C) {
       var b = o.children;
       if (b !== void 0)
         if (x)
@@ -215,8 +215,8 @@ React keys must be passed directly to JSX without using spread:
       }
       if (b = null, s !== void 0 && (f(s), b = "" + s), c(o) && (f(o.key), b = "" + o.key), "key" in o) {
         s = {};
-        for (var C in o)
-          C !== "key" && (s[C] = o[C]);
+        for (var A in o)
+          A !== "key" && (s[A] = o[A]);
       } else s = o;
       return b && t(
         s,
@@ -229,7 +229,7 @@ React keys must be passed directly to JSX without using spread:
         n(),
         s,
         O,
-        A
+        C
       );
     }
     function j(e) {
@@ -247,7 +247,7 @@ React keys must be passed directly to JSX without using spread:
       a,
       u
     )(), q = S(d(u)), D = {};
-    N.Fragment = _, N.jsx = function(e, o, s, x, v) {
+    k.Fragment = _, k.jsx = function(e, o, s, x, v) {
       var h = 1e4 > T.recentlyCreatedOwnerStacks++;
       return g(
         e,
@@ -259,7 +259,7 @@ React keys must be passed directly to JSX without using spread:
         h ? Error("react-stack-top-frame") : Y,
         h ? S(d(e)) : q
       );
-    }, N.jsxs = function(e, o, s, x, v) {
+    }, k.jsxs = function(e, o, s, x, v) {
       var h = 1e4 > T.recentlyCreatedOwnerStacks++;
       return g(
         e,
@@ -272,11 +272,11 @@ React keys must be passed directly to JSX without using spread:
         h ? S(d(e)) : q
       );
     };
-  }()), N;
+  }()), k;
 }
 var W;
 function se() {
-  return W || (W = 1, process.env.NODE_ENV === "production" ? k.exports = te() : k.exports = ie()), k.exports;
+  return W || (W = 1, process.env.NODE_ENV === "production" ? N.exports = te() : N.exports = ie()), N.exports;
 }
 var r = se();
 const de = (l = null) => {
@@ -359,7 +359,7 @@ const de = (l = null) => {
         )) })
       ] })
     ] }),
-    /* @__PURE__ */ r.jsx("div", { className: "botones-container", children: /* @__PURE__ */ r.jsxs("button", { onClick: u, className: "boton-mejorado boton-exportar", children: [
+    /* @__PURE__ */ r.jsx("div", { className: "botones", children: /* @__PURE__ */ r.jsxs("button", { onClick: u, className: "boton-mejorado boton-exportar", style: { backgroundColor: "#37474f", background: "#37474f !important" }, children: [
       /* @__PURE__ */ r.jsx("svg", { className: "boton-icon", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ r.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12" }) }),
       "Guardar"
     ] }) })

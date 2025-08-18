@@ -154,7 +154,7 @@
   font-weight: 500;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: #37474f;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -169,4 +169,9 @@
 .header-botones button:active {
   transform: scale(0.98);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton-exportar {
+  background: #37474f !important;
+  color: white !important;
 }

@@ -1,4 +1,5 @@
 
+import "./CSS/style.css"
 const Header = ({ abierto, onClick, colorSeleccionado, setColorSeleccionado, colores, handleExport }) => {
   const seleccionarColor = (color) => {
     setColorSeleccionado(color);
@@ -48,8 +49,8 @@ const Header = ({ abierto, onClick, colorSeleccionado, setColorSeleccionado, col
           </div>
         </div>
 
-        <div className="botones-container">
-          <button onClick={handleExport} className="boton-mejorado boton-exportar">
+        <div className="botones">
+          <button onClick={handleExport} className="boton-mejorado boton-exportar" style={{ backgroundColor: "#37474f", background: "#37474f !important" }}>
             <svg className="boton-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12" />
             </svg>
