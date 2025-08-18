@@ -27,19 +27,48 @@ const Odontograma = ({ savedState, onSave }) => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  if (isSmallScreen) {
-    return (
-      <div className="flex items-center justify-center h-screen bg-gray-100 p-6 text-center">
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-md">
-          <h2 className="text-xl font-bold text-red-600 mb-2">Pantalla demasiado pequeña</h2>
-          <p className="text-gray-600">
-            El odontograma no puede visualizarse correctamente en dispositivos pequeños.
-            Intenta usar una tablet o computadora.
-          </p>
-        </div>
-      </div>
-    );
-  }
+ if (isSmallScreen) {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+        borderRadius: "16px",
+        padding: "24px",
+        maxWidth: "400px",
+        width: "90%",
+        textAlign: "center",
+        zIndex: 9999,
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "1.25rem",
+          fontWeight: "700",
+          color: "#dc3545",
+          marginBottom: "12px",
+        }}
+      >
+        Pantalla demasiado pequeña
+      </h2>
+      <p
+        style={{
+          color: "#6c757d",
+          margin: 0,
+        }}
+      >
+        El odontograma no puede visualizarse correctamente en dispositivos pequeños.
+        Intenta usar una tablet o computadora.
+      </p>
+    </div>
+  );
+}
+
+
   return (
     <>
       <style>{`

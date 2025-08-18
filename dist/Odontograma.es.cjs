@@ -1,5 +1,5 @@
 import ne, { useState as R, useEffect as J } from "react";
-var _ = { exports: {} }, N = {};
+var _ = { exports: {} }, k = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -11,7 +11,7 @@ var _ = { exports: {} }, N = {};
  */
 var F;
 function te() {
-  if (F) return N;
+  if (F) return k;
   F = 1;
   var l = Symbol.for("react.transitional.element"), m = Symbol.for("react.fragment");
   function f(d, n, u) {
@@ -29,9 +29,9 @@ function te() {
       props: u
     };
   }
-  return N.Fragment = m, N.jsx = f, N.jsxs = f, N;
+  return k.Fragment = m, k.jsx = f, k.jsxs = f, k;
 }
-var k = {};
+var N = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -67,21 +67,21 @@ function ie() {
         switch (typeof e.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), e.$$typeof) {
-          case a:
+          case o:
             return "Portal";
-          case H:
+          case B:
             return (e.displayName || "Context") + ".Provider";
           case X:
             return (e._context.displayName || "Context") + ".Consumer";
-          case B:
-            var o = e.render;
-            return e = e.displayName, e || (e = o.displayName || o.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
+          case H:
+            var a = e.render;
+            return e = e.displayName, e || (e = a.displayName || a.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case K:
-            return o = e.displayName || null, o !== null ? o : l(e.type) || "Memo";
+            return a = e.displayName || null, a !== null ? a : l(e.type) || "Memo";
           case $:
-            o = e._payload, e = e._init;
+            a = e._payload, e = e._init;
             try {
-              return l(e(o));
+              return l(e(a));
             } catch {
             }
         }
@@ -93,15 +93,15 @@ function ie() {
     function f(e) {
       try {
         m(e);
-        var o = !1;
+        var a = !1;
       } catch {
-        o = !0;
+        a = !0;
       }
-      if (o) {
-        o = console;
-        var s = o.error, x = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+      if (a) {
+        a = console;
+        var s = a.error, x = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
         return s.call(
-          o,
+          a,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           x
         ), m(e);
@@ -112,8 +112,8 @@ function ie() {
       if (typeof e == "object" && e !== null && e.$$typeof === $)
         return "<...>";
       try {
-        var o = l(e);
-        return o ? "<" + o + ">" : "<...>";
+        var a = l(e);
+        return a ? "<" + a + ">" : "<...>";
       } catch {
         return "<...>";
       }
@@ -127,16 +127,16 @@ function ie() {
     }
     function c(e) {
       if (L.call(e, "key")) {
-        var o = Object.getOwnPropertyDescriptor(e, "key").get;
-        if (o && o.isReactWarning) return !1;
+        var a = Object.getOwnPropertyDescriptor(e, "key").get;
+        if (a && a.isReactWarning) return !1;
       }
       return e.key !== void 0;
     }
-    function t(e, o) {
+    function t(e, a) {
       function s() {
         M || (M = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          o
+          a
         ));
       }
       s.isReactWarning = !0, Object.defineProperty(e, "key", {
@@ -150,11 +150,11 @@ function ie() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function p(e, o, s, x, v, h, C, P) {
+    function p(e, a, s, x, v, h, C, P) {
       return s = h.ref, e = {
         $$typeof: S,
         type: e,
-        key: o,
+        key: a,
         props: h,
         _owner: v
       }, (s !== void 0 ? s : null) !== null ? Object.defineProperty(e, "ref", {
@@ -182,11 +182,11 @@ function ie() {
         value: P
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, o, s, x, v, h, C, P) {
-      var b = o.children;
+    function g(e, a, s, x, v, h, C, P) {
+      var b = a.children;
       if (b !== void 0)
         if (x)
-          if (ae(b)) {
+          if (oe(b)) {
             for (x = 0; x < b.length; x++)
               j(b[x]);
             Object.freeze && Object.freeze(b);
@@ -195,10 +195,10 @@ function ie() {
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
         else j(b);
-      if (L.call(o, "key")) {
+      if (L.call(a, "key")) {
         b = l(e);
-        var y = Object.keys(o).filter(function(oe) {
-          return oe !== "key";
+        var y = Object.keys(a).filter(function(ae) {
+          return ae !== "key";
         });
         x = 0 < y.length ? "{key: someKey, " + y.join(": ..., ") + ": ...}" : "{key: someKey}", D[b + x] || (y = 0 < y.length ? "{" + y.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
@@ -213,11 +213,11 @@ React keys must be passed directly to JSX without using spread:
           b
         ), D[b + x] = !0);
       }
-      if (b = null, s !== void 0 && (f(s), b = "" + s), c(o) && (f(o.key), b = "" + o.key), "key" in o) {
+      if (b = null, s !== void 0 && (f(s), b = "" + s), c(a) && (f(a.key), b = "" + a.key), "key" in a) {
         s = {};
-        for (var z in o)
-          z !== "key" && (s[z] = o[z]);
-      } else s = o;
+        for (var z in a)
+          z !== "key" && (s[z] = a[z]);
+      } else s = a;
       return b && t(
         s,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function j(e) {
       typeof e == "object" && e !== null && e.$$typeof === S && e._store && (e._store.validated = 1);
     }
-    var E = ne, S = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), G = Symbol.for("react.strict_mode"), V = Symbol.for("react.profiler"), X = Symbol.for("react.consumer"), H = Symbol.for("react.context"), B = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), Q = Symbol.for("react.suspense_list"), K = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), ee = Symbol.for("react.activity"), re = Symbol.for("react.client.reference"), O = E.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, L = Object.prototype.hasOwnProperty, ae = Array.isArray, A = console.createTask ? console.createTask : function() {
+    var E = ne, S = Symbol.for("react.transitional.element"), o = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), G = Symbol.for("react.strict_mode"), V = Symbol.for("react.profiler"), X = Symbol.for("react.consumer"), B = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), Q = Symbol.for("react.suspense_list"), K = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), ee = Symbol.for("react.activity"), re = Symbol.for("react.client.reference"), O = E.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, L = Object.prototype.hasOwnProperty, oe = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
     E = {
@@ -247,11 +247,11 @@ React keys must be passed directly to JSX without using spread:
       E,
       u
     )(), I = A(d(u)), D = {};
-    k.Fragment = T, k.jsx = function(e, o, s, x, v) {
+    N.Fragment = T, N.jsx = function(e, a, s, x, v) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
-        o,
+        a,
         s,
         !1,
         x,
@@ -259,11 +259,11 @@ React keys must be passed directly to JSX without using spread:
         h ? Error("react-stack-top-frame") : q,
         h ? A(d(e)) : I
       );
-    }, k.jsxs = function(e, o, s, x, v) {
+    }, N.jsxs = function(e, a, s, x, v) {
       var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
-        o,
+        a,
         s,
         !0,
         x,
@@ -272,7 +272,7 @@ React keys must be passed directly to JSX without using spread:
         h ? A(d(e)) : I
       );
     };
-  }()), k;
+  }()), N;
 }
 var U;
 function se() {
@@ -430,18 +430,57 @@ const de = (l = null) => {
   ] });
 }, me = ({ savedState: l, onSave: m }) => {
   const { colors: f, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: u } = de(l), [c, t] = R(!1), [i, p] = R(f[0]), [g, j] = R(!1), { handleExport: E } = le(d, u), S = () => {
-    const a = E();
-    m(a);
+    const o = E();
+    m(o);
   };
   return J(() => {
-    const a = () => {
+    const o = () => {
       j(window.innerWidth < 1024);
     };
-    return a(), window.addEventListener("resize", a), () => window.removeEventListener("resize", a);
-  }, []), g ? /* @__PURE__ */ r.jsx("div", { className: "flex items-center justify-center h-screen bg-gray-100 p-6 text-center", children: /* @__PURE__ */ r.jsxs("div", { className: "bg-white shadow-lg rounded-2xl p-6 max-w-md", children: [
-    /* @__PURE__ */ r.jsx("h2", { className: "text-xl font-bold text-red-600 mb-2", children: "Pantalla demasiado pequeña" }),
-    /* @__PURE__ */ r.jsx("p", { className: "text-gray-600", children: "El odontograma no puede visualizarse correctamente en dispositivos pequeños. Intenta usar una tablet o computadora." })
-  ] }) }) : /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
+    return o(), window.addEventListener("resize", o), () => window.removeEventListener("resize", o);
+  }, []), g ? /* @__PURE__ */ r.jsxs(
+    "div",
+    {
+      style: {
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+        borderRadius: "16px",
+        padding: "24px",
+        maxWidth: "400px",
+        width: "90%",
+        textAlign: "center",
+        zIndex: 9999
+      },
+      children: [
+        /* @__PURE__ */ r.jsx(
+          "h2",
+          {
+            style: {
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              color: "#dc3545",
+              marginBottom: "12px"
+            },
+            children: "Pantalla demasiado pequeña"
+          }
+        ),
+        /* @__PURE__ */ r.jsx(
+          "p",
+          {
+            style: {
+              color: "#6c757d",
+              margin: 0
+            },
+            children: "El odontograma no puede visualizarse correctamente en dispositivos pequeños. Intenta usar una tablet o computadora."
+          }
+        )
+      ]
+    }
+  ) : /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
         /* Estilos del contenedor principal */
         .odontograma-container {
@@ -885,101 +924,101 @@ const de = (l = null) => {
       /* @__PURE__ */ r.jsx("div", { className: "odontograma-seccion", children: /* @__PURE__ */ r.jsxs("div", { className: "odontograma-grid", children: [
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-1", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "1" }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "1",
               colorSeleccionado: i,
-              coloresSecciones: d[`1${a}`],
+              coloresSecciones: d[`1${o}`],
               cambiarColorSeccion: n
             },
-            `1-${a}`
+            `1-${o}`
           )) }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "5",
               colorSeleccionado: i,
-              coloresSecciones: d[`5${a}`],
+              coloresSecciones: d[`5${o}`],
               cambiarColorSeccion: n
             },
-            `5-${a}`
+            `5-${o}`
           )) })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-2", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "2" }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "2",
               colorSeleccionado: i,
-              coloresSecciones: d[`2${a}`],
+              coloresSecciones: d[`2${o}`],
               cambiarColorSeccion: n
             },
-            `2-${a}`
+            `2-${o}`
           )) }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "6",
               colorSeleccionado: i,
-              coloresSecciones: d[`6${a}`],
+              coloresSecciones: d[`6${o}`],
               cambiarColorSeccion: n
             },
-            `6-${a}`
+            `6-${o}`
           )) })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-4", children: [
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "8",
               colorSeleccionado: i,
-              coloresSecciones: d[`8${a}`],
+              coloresSecciones: d[`8${o}`],
               cambiarColorSeccion: n
             },
-            `8-${a}`
+            `8-${o}`
           )) }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "4",
               colorSeleccionado: i,
-              coloresSecciones: d[`4${a}`],
+              coloresSecciones: d[`4${o}`],
               cambiarColorSeccion: n
             },
-            `4-${a}`
+            `4-${o}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "4" })
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-3", children: [
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "7",
               colorSeleccionado: i,
-              coloresSecciones: d[`7${a}`],
+              coloresSecciones: d[`7${o}`],
               cambiarColorSeccion: n
             },
-            `7-${a}`
+            `7-${o}`
           )) }),
-          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
+          /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((o) => /* @__PURE__ */ r.jsx(
             w,
             {
-              numero: a,
+              numero: o,
               cuadrante: "3",
               colorSeleccionado: i,
-              coloresSecciones: d[`3${a}`],
+              coloresSecciones: d[`3${o}`],
               cambiarColorSeccion: n
             },
-            `3-${a}`
+            `3-${o}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "3" })
         ] }),
@@ -988,16 +1027,16 @@ const de = (l = null) => {
       ] }) }),
       /* @__PURE__ */ r.jsxs("div", { className: "leyenda-container", children: [
         /* @__PURE__ */ r.jsx("h3", { className: "leyenda-titulo", children: "Leyenda de Tratamientos" }),
-        /* @__PURE__ */ r.jsx("div", { className: "leyenda-grid", children: f.map((a) => /* @__PURE__ */ r.jsxs("div", { className: "leyenda-item", children: [
+        /* @__PURE__ */ r.jsx("div", { className: "leyenda-grid", children: f.map((o) => /* @__PURE__ */ r.jsxs("div", { className: "leyenda-item", children: [
           /* @__PURE__ */ r.jsx(
             "div",
             {
               className: "leyenda-color",
-              style: { backgroundColor: a.valor }
+              style: { backgroundColor: o.valor }
             }
           ),
-          /* @__PURE__ */ r.jsx("span", { className: "leyenda-texto", children: a.nombre })
-        ] }, a.valor)) })
+          /* @__PURE__ */ r.jsx("span", { className: "leyenda-texto", children: o.nombre })
+        ] }, o.valor)) })
       ] })
     ] })
   ] });
