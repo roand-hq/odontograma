@@ -9,14 +9,37 @@ const Odontograma = ({ savedState, onSave }) => {
     useColorChange(savedState);
   const [abierto, setAbierto] = useState(false);
   const [colorSeleccionado, setColorSeleccionado] = useState(colors[0]);
-
+  const [isSmallScreen, setIsSmallScreen] = useState(false)
   const { handleExport } = useHandleData(estadoDientes, setEstadoDientes);
   const handleGuardar = () => {
     const datos = handleExport();
  
     onSave(datos);
   };
+ useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1024);
+    };
 
+    checkScreenSize(); // Revisar al montar
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  if (isSmallScreen) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100 p-6 text-center">
+        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-md">
+          <h2 className="text-xl font-bold text-red-600 mb-2">Pantalla demasiado pequeña</h2>
+          <p className="text-gray-600">
+            El odontograma no puede visualizarse correctamente en dispositivos pequeños.
+            Intenta usar una tablet o computadora.
+          </p>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <style>{`

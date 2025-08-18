@@ -1,5 +1,5 @@
-import oe, { useState as R, useEffect as ne } from "react";
-var k = { exports: {} }, y = {};
+import ne, { useState as R, useEffect as J } from "react";
+var _ = { exports: {} }, N = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -9,12 +9,12 @@ var k = { exports: {} }, y = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var I;
+var F;
 function te() {
-  if (I) return y;
-  I = 1;
-  var d = Symbol.for("react.transitional.element"), m = Symbol.for("react.fragment");
-  function f(l, n, u) {
+  if (F) return N;
+  F = 1;
+  var l = Symbol.for("react.transitional.element"), m = Symbol.for("react.fragment");
+  function f(d, n, u) {
     var c = null;
     if (u !== void 0 && (c = "" + u), n.key !== void 0 && (c = "" + n.key), "key" in n) {
       u = {};
@@ -22,16 +22,16 @@ function te() {
         t !== "key" && (u[t] = n[t]);
     } else u = n;
     return n = u.ref, {
-      $$typeof: d,
-      type: l,
+      $$typeof: l,
+      type: d,
       key: c,
       ref: n !== void 0 ? n : null,
       props: u
     };
   }
-  return y.Fragment = m, y.jsx = f, y.jsxs = f, y;
+  return N.Fragment = m, N.jsx = f, N.jsxs = f, N;
 }
-var N = {};
+var k = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -41,47 +41,47 @@ var N = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var F;
+var W;
 function ie() {
-  return F || (F = 1, process.env.NODE_ENV !== "production" && function() {
-    function d(e) {
+  return W || (W = 1, process.env.NODE_ENV !== "production" && function() {
+    function l(e) {
       if (e == null) return null;
       if (typeof e == "function")
-        return e.$$typeof === ee ? null : e.displayName || e.name || null;
+        return e.$$typeof === re ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case _:
+        case T:
           return "Fragment";
-        case G:
+        case V:
           return "Profiler";
-        case J:
+        case G:
           return "StrictMode";
-        case B:
-          return "Suspense";
         case Z:
+          return "Suspense";
+        case Q:
           return "SuspenseList";
-        case K:
+        case ee:
           return "Activity";
       }
       if (typeof e == "object")
         switch (typeof e.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), e.$$typeof) {
-          case U:
+          case a:
             return "Portal";
-          case X:
-            return (e.displayName || "Context") + ".Provider";
-          case V:
-            return (e._context.displayName || "Context") + ".Consumer";
           case H:
+            return (e.displayName || "Context") + ".Provider";
+          case X:
+            return (e._context.displayName || "Context") + ".Consumer";
+          case B:
             var o = e.render;
             return e = e.displayName, e || (e = o.displayName || o.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
-          case Q:
-            return o = e.displayName || null, o !== null ? o : d(e.type) || "Memo";
+          case K:
+            return o = e.displayName || null, o !== null ? o : l(e.type) || "Memo";
           case $:
             o = e._payload, e = e._init;
             try {
-              return d(e(o));
+              return l(e(o));
             } catch {
             }
         }
@@ -107,26 +107,26 @@ function ie() {
         ), m(e);
       }
     }
-    function l(e) {
-      if (e === _) return "<>";
+    function d(e) {
+      if (e === T) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === $)
         return "<...>";
       try {
-        var o = d(e);
+        var o = l(e);
         return o ? "<" + o + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
     function n() {
-      var e = T.A;
+      var e = O.A;
       return e === null ? null : e.getOwner();
     }
     function u() {
       return Error("react-stack-top-frame");
     }
     function c(e) {
-      if (z.call(e, "key")) {
+      if (L.call(e, "key")) {
         var o = Object.getOwnPropertyDescriptor(e, "key").get;
         if (o && o.isReactWarning) return !1;
       }
@@ -145,14 +145,14 @@ function ie() {
       });
     }
     function i() {
-      var e = d(this.type);
-      return L[e] || (L[e] = !0, console.error(
+      var e = l(this.type);
+      return Y[e] || (Y[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function p(e, o, s, x, v, h, O, A) {
+    function p(e, o, s, x, v, h, C, P) {
       return s = h.ref, e = {
-        $$typeof: P,
+        $$typeof: S,
         type: e,
         key: o,
         props: h,
@@ -174,19 +174,19 @@ function ie() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: O
+        value: C
       }), Object.defineProperty(e, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: A
+        value: P
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, o, s, x, v, h, O, A) {
+    function g(e, o, s, x, v, h, C, P) {
       var b = o.children;
       if (b !== void 0)
         if (x)
-          if (re(b)) {
+          if (ae(b)) {
             for (x = 0; x < b.length; x++)
               j(b[x]);
             Object.freeze && Object.freeze(b);
@@ -195,12 +195,12 @@ function ie() {
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
         else j(b);
-      if (z.call(o, "key")) {
-        b = d(e);
-        var w = Object.keys(o).filter(function(ae) {
-          return ae !== "key";
+      if (L.call(o, "key")) {
+        b = l(e);
+        var y = Object.keys(o).filter(function(oe) {
+          return oe !== "key";
         });
-        x = 0 < w.length ? "{key: someKey, " + w.join(": ..., ") + ": ...}" : "{key: someKey}", D[b + x] || (w = 0 < w.length ? "{" + w.join(": ..., ") + ": ...}" : "{}", console.error(
+        x = 0 < y.length ? "{key: someKey, " + y.join(": ..., ") + ": ...}" : "{key: someKey}", D[b + x] || (y = 0 < y.length ? "{" + y.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -209,14 +209,14 @@ React keys must be passed directly to JSX without using spread:
   <%s key={someKey} {...props} />`,
           x,
           b,
-          w,
+          y,
           b
         ), D[b + x] = !0);
       }
       if (b = null, s !== void 0 && (f(s), b = "" + s), c(o) && (f(o.key), b = "" + o.key), "key" in o) {
         s = {};
-        for (var C in o)
-          C !== "key" && (s[C] = o[C]);
+        for (var z in o)
+          z !== "key" && (s[z] = o[z]);
       } else s = o;
       return b && t(
         s,
@@ -228,27 +228,27 @@ React keys must be passed directly to JSX without using spread:
         v,
         n(),
         s,
-        O,
-        A
+        C,
+        P
       );
     }
     function j(e) {
-      typeof e == "object" && e !== null && e.$$typeof === P && e._store && (e._store.validated = 1);
+      typeof e == "object" && e !== null && e.$$typeof === S && e._store && (e._store.validated = 1);
     }
-    var a = oe, P = Symbol.for("react.transitional.element"), U = Symbol.for("react.portal"), _ = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), G = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), X = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), Z = Symbol.for("react.suspense_list"), Q = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), ee = Symbol.for("react.client.reference"), T = a.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, z = Object.prototype.hasOwnProperty, re = Array.isArray, S = console.createTask ? console.createTask : function() {
+    var E = ne, S = Symbol.for("react.transitional.element"), a = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), G = Symbol.for("react.strict_mode"), V = Symbol.for("react.profiler"), X = Symbol.for("react.consumer"), H = Symbol.for("react.context"), B = Symbol.for("react.forward_ref"), Z = Symbol.for("react.suspense"), Q = Symbol.for("react.suspense_list"), K = Symbol.for("react.memo"), $ = Symbol.for("react.lazy"), ee = Symbol.for("react.activity"), re = Symbol.for("react.client.reference"), O = E.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, L = Object.prototype.hasOwnProperty, ae = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
-    a = {
+    E = {
       "react-stack-bottom-frame": function(e) {
         return e();
       }
     };
-    var M, L = {}, Y = a["react-stack-bottom-frame"].bind(
-      a,
+    var M, Y = {}, q = E["react-stack-bottom-frame"].bind(
+      E,
       u
-    )(), q = S(l(u)), D = {};
-    N.Fragment = _, N.jsx = function(e, o, s, x, v) {
-      var h = 1e4 > T.recentlyCreatedOwnerStacks++;
+    )(), I = A(d(u)), D = {};
+    k.Fragment = T, k.jsx = function(e, o, s, x, v) {
+      var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
@@ -256,11 +256,11 @@ React keys must be passed directly to JSX without using spread:
         !1,
         x,
         v,
-        h ? Error("react-stack-top-frame") : Y,
-        h ? S(l(e)) : q
+        h ? Error("react-stack-top-frame") : q,
+        h ? A(d(e)) : I
       );
-    }, N.jsxs = function(e, o, s, x, v) {
-      var h = 1e4 > T.recentlyCreatedOwnerStacks++;
+    }, k.jsxs = function(e, o, s, x, v) {
+      var h = 1e4 > O.recentlyCreatedOwnerStacks++;
       return g(
         e,
         o,
@@ -268,18 +268,18 @@ React keys must be passed directly to JSX without using spread:
         !0,
         x,
         v,
-        h ? Error("react-stack-top-frame") : Y,
-        h ? S(l(e)) : q
+        h ? Error("react-stack-top-frame") : q,
+        h ? A(d(e)) : I
       );
     };
-  }()), N;
+  }()), k;
 }
-var W;
+var U;
 function se() {
-  return W || (W = 1, process.env.NODE_ENV === "production" ? k.exports = te() : k.exports = ie()), k.exports;
+  return U || (U = 1, process.env.NODE_ENV === "production" ? _.exports = te() : _.exports = ie()), _.exports;
 }
 var r = se();
-const le = (d = null) => {
+const de = (l = null) => {
   const m = [
     { nombre: "Caries", valor: "#dc2626" },
     { nombre: "Obturación", valor: "#3b82f6" },
@@ -303,12 +303,12 @@ const le = (d = null) => {
         };
       }
     return c;
-  }, [l, n] = R(
-    d || f()
+  }, [d, n] = R(
+    l || f()
   );
-  return ne(() => {
-    d && n(d);
-  }, [d]), { colors: m, estadoDientes: l, cambiarColorSeccion: (c, t, i) => {
+  return J(() => {
+    l && n(l);
+  }, [l]), { colors: m, estadoDientes: d, cambiarColorSeccion: (c, t, i) => {
     n((p) => {
       const j = p[c][t] === i ? "#ffffff" : i;
       return {
@@ -320,9 +320,9 @@ const le = (d = null) => {
       };
     });
   }, setEstadoDientes: n };
-}, de = (d, m) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(d, null, 2) : d, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (m(n), !0) }), ce = ({ abierto: d, onClick: m, colorSeleccionado: f, setColorSeleccionado: l, colores: n, handleExport: u }) => {
+}, le = (l, m) => ({ handleExport: ({ asString: n = !1 } = {}) => n ? JSON.stringify(l, null, 2) : l, handleImport: (n) => !n || typeof n != "object" ? (console.error("Estado inválido:", n), !1) : (m(n), !0) }), ce = ({ abierto: l, onClick: m, colorSeleccionado: f, setColorSeleccionado: d, colores: n, handleExport: u }) => {
   const c = (t) => {
-    l(t), m == null || m();
+    d(t), m == null || m();
   };
   return /* @__PURE__ */ r.jsx("div", { className: "header-mejorado", children: /* @__PURE__ */ r.jsxs("div", { className: "header-contenido", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "selector-color-container", children: [
@@ -339,7 +339,7 @@ const le = (d = null) => {
           /* @__PURE__ */ r.jsx("span", { className: "nombre-color-mejorado", children: f.nombre }),
           /* @__PURE__ */ r.jsx("svg", { className: "dropdown-icon", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ r.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }) })
         ] }),
-        d && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((t) => /* @__PURE__ */ r.jsxs(
+        l && /* @__PURE__ */ r.jsx("div", { className: "combo-lista-mejorada", children: n.map((t) => /* @__PURE__ */ r.jsxs(
           "div",
           {
             className: "combo-item-mejorado",
@@ -364,11 +364,11 @@ const le = (d = null) => {
       "Guardar"
     ] }) })
   ] }) });
-}, E = ({ numero: d, cuadrante: m, colorSeleccionado: f, coloresSecciones: l, cambiarColorSeccion: n }) => {
-  const u = `${m}${d}`, [c, t] = R(null), i = (g) => {
+}, w = ({ numero: l, cuadrante: m, colorSeleccionado: f, coloresSecciones: d, cambiarColorSeccion: n }) => {
+  const u = `${m}${l}`, [c, t] = R(null), i = (g) => {
     n(u, g, f.valor);
   }, p = (g, j) => ({
-    backgroundColor: l[g] || j,
+    backgroundColor: d[g] || j,
     opacity: c === g ? 0.8 : 1
   });
   return /* @__PURE__ */ r.jsxs("div", { className: "diente-container", children: [
@@ -428,12 +428,20 @@ const le = (d = null) => {
       /* @__PURE__ */ r.jsx("div", { className: "linea-diagonal-der-mejorada" })
     ] })
   ] });
-}, me = ({ savedState: d, onSave: m }) => {
-  const { colors: f, estadoDientes: l, cambiarColorSeccion: n, setEstadoDientes: u } = le(d), [c, t] = R(!1), [i, p] = R(f[0]), { handleExport: g } = de(l, u), j = () => {
-    const a = g();
+}, me = ({ savedState: l, onSave: m }) => {
+  const { colors: f, estadoDientes: d, cambiarColorSeccion: n, setEstadoDientes: u } = de(l), [c, t] = R(!1), [i, p] = R(f[0]), [g, j] = R(!1), { handleExport: E } = le(d, u), S = () => {
+    const a = E();
     m(a);
   };
-  return /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
+  return J(() => {
+    const a = () => {
+      j(window.innerWidth < 1024);
+    };
+    return a(), window.addEventListener("resize", a), () => window.removeEventListener("resize", a);
+  }, []), g ? /* @__PURE__ */ r.jsx("div", { className: "flex items-center justify-center h-screen bg-gray-100 p-6 text-center", children: /* @__PURE__ */ r.jsxs("div", { className: "bg-white shadow-lg rounded-2xl p-6 max-w-md", children: [
+    /* @__PURE__ */ r.jsx("h2", { className: "text-xl font-bold text-red-600 mb-2", children: "Pantalla demasiado pequeña" }),
+    /* @__PURE__ */ r.jsx("p", { className: "text-gray-600", children: "El odontograma no puede visualizarse correctamente en dispositivos pequeños. Intenta usar una tablet o computadora." })
+  ] }) }) : /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
     /* @__PURE__ */ r.jsx("style", { children: `
         /* Estilos del contenedor principal */
         .odontograma-container {
@@ -871,30 +879,30 @@ const le = (d = null) => {
           colorSeleccionado: i,
           setColorSeleccionado: p,
           colores: f,
-          handleExport: j
+          handleExport: S
         }
       ),
       /* @__PURE__ */ r.jsx("div", { className: "odontograma-seccion", children: /* @__PURE__ */ r.jsxs("div", { className: "odontograma-grid", children: [
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-1", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "1" }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "1",
               colorSeleccionado: i,
-              coloresSecciones: l[`1${a}`],
+              coloresSecciones: d[`1${a}`],
               cambiarColorSeccion: n
             },
             `1-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "5",
               colorSeleccionado: i,
-              coloresSecciones: l[`5${a}`],
+              coloresSecciones: d[`5${a}`],
               cambiarColorSeccion: n
             },
             `5-${a}`
@@ -903,23 +911,23 @@ const le = (d = null) => {
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-2", children: [
           /* @__PURE__ */ r.jsx("div", { className: "numero-cuadrante", children: "2" }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "2",
               colorSeleccionado: i,
-              coloresSecciones: l[`2${a}`],
+              coloresSecciones: d[`2${a}`],
               cambiarColorSeccion: n
             },
             `2-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "6",
               colorSeleccionado: i,
-              coloresSecciones: l[`6${a}`],
+              coloresSecciones: d[`6${a}`],
               cambiarColorSeccion: n
             },
             `6-${a}`
@@ -927,23 +935,23 @@ const le = (d = null) => {
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-4", children: [
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-izq", children: ["5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "8",
               colorSeleccionado: i,
-              coloresSecciones: l[`8${a}`],
+              coloresSecciones: d[`8${a}`],
               cambiarColorSeccion: n
             },
             `8-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["8", "7", "6", "5", "4", "3", "2", "1"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "4",
               colorSeleccionado: i,
-              coloresSecciones: l[`4${a}`],
+              coloresSecciones: d[`4${a}`],
               cambiarColorSeccion: n
             },
             `4-${a}`
@@ -952,23 +960,23 @@ const le = (d = null) => {
         ] }),
         /* @__PURE__ */ r.jsxs("div", { className: "cuadrante cuadrante-3", children: [
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila-infantiles-der", children: ["1", "2", "3", "4", "5"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "7",
               colorSeleccionado: i,
-              coloresSecciones: l[`7${a}`],
+              coloresSecciones: d[`7${a}`],
               cambiarColorSeccion: n
             },
             `7-${a}`
           )) }),
           /* @__PURE__ */ r.jsx("div", { className: "dientes-fila", children: ["1", "2", "3", "4", "5", "6", "7", "8"].map((a) => /* @__PURE__ */ r.jsx(
-            E,
+            w,
             {
               numero: a,
               cuadrante: "3",
               colorSeleccionado: i,
-              coloresSecciones: l[`3${a}`],
+              coloresSecciones: d[`3${a}`],
               cambiarColorSeccion: n
             },
             `3-${a}`
