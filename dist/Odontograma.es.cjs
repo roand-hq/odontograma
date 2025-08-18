@@ -575,6 +575,7 @@ const le = (d = null) => {
         .boton-mejorado {
           display: flex;
           align-items: center;
+           margin-top: 1.5rem;
           gap: 8px;
           padding: 10px 16px;
           border: none;

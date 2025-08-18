@@ -160,6 +160,7 @@ React keys must be passed directly to JSX without using spread:
         .boton-mejorado {
           display: flex;
           align-items: center;
+           margin-top: 1.5rem;
           gap: 8px;
           padding: 10px 16px;
           border: none;
