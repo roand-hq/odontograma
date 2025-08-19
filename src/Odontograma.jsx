@@ -41,8 +41,7 @@ const Odontograma = ({ savedState, onSave }) => {
         padding: "24px",
         maxWidth: "400px",
         width: "90%",
-        textAlign: "center",
-        zIndex: 9999,
+        textAlign: "center"
       }}
     >
       <h2
