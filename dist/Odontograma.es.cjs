@@ -453,7 +453,7 @@ const de = (l = null) => {
         maxWidth: "400px",
         width: "90%",
         textAlign: "center",
-        zIndex: -1
+        zIndex: 1
       },
       children: [
         /* @__PURE__ */ r.jsx(
